@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1d5pJnvAdciEmd8omf0lBOsEWUY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dao/classes" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\dao\classes" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="" />
+      <created>1591724738412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591724738412</updated>
+      <workItem from="1591724739937" duration="1089000" />
+      <workItem from="1591725954300" duration="10038000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1591727405530">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591727405530" />
+    <state x="720" y="318" key="NewPhpClassDialog" timestamp="1591737696338">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="318" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591737696338" />
+    <state x="795" y="439" key="NewPhpFileDialog" timestamp="1591737704843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="795" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591737704843" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1591726292850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591726292850" />
+    <state x="674" y="198" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1591725577940">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="674" y="198" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591725577940" />
+    <state x="-1700" y="0" width="1330" height="925" maximized="true" key="dock-window-1" timestamp="1591735870326">
+      <screen x="-1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="-1700" y="0" width="1330" height="925" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591735870326" />
+  </component>
+</project>
