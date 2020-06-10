@@ -50,8 +50,8 @@ CREATE TABLE veicoli (
 CREATE TABLE incidenti (
   idIncidente INT(5) PRIMARY KEY AUTO_INCREMENT,
   descrizione VARCHAR(150) NOT NULL,
-  longitudine DECIMAL NOT NULL,
-  latitudine DECIMAL NOT NULL,
+  longitudine DECIMAL(11,8) NOT NULL,
+  latitudine DECIMAL(10,8) NOT NULL,
   data DATE NOT NULL,
   ora TIME NOT NULL ,
   pathFoto VARCHAR(100) NOT NULL
@@ -69,7 +69,7 @@ CREATE TABLE ruoli (
 );
 
 CREATE TABLE veicoliInIncidenti (
-  idVeicoliInIncidenti INT(5) PRIMARY KEY AUTO_INCREMENT,
+  idVeicoloInIncidente INT(5) PRIMARY KEY AUTO_INCREMENT,
   idVeicolo INT(5) NOT NULL,
   idIncidente INT(5) NOT NULL,
   FOREIGN KEY (idVeicolo) REFERENCES veicoli(idVeicolo),
@@ -77,8 +77,25 @@ CREATE TABLE veicoliInIncidenti (
 );
 
 INSERT INTO assicurazioni (denominazione, numPolizza, validita, indirizzo, telefono, email) VALUES
-    ('Asil', '45XJ', TRUE, 'Via appi 45', '3468526455', 'alex@gmail.com');
+('Asil', '45XJ', TRUE, 'Via appi 45', '3468526455', 'alex@gmail.com');
 
-INSERT INTO persone (nome, cognome, datanascita, codicefiscale, indirizzo, cap, stato, telefono, numpatente, catpatente, ferito) VALUES
+INSERT INTO persone (nome, cognome, datanascita, codfiscale, indirizzo, cap, stato, telefono, numpatente, catpatente, ferito) VALUES
 ('Alex', 'Calabrese', '2002-02-08', 'CLBLXA085S5', 'Via Pergola 45', '85050', 'Italia','3468526455', '45B78', 'B', FALSE);
 
+INSERT INTO veicoli (marca, tipo, targa, idAssicurazione, idPersona) VALUES
+('FCA', '500X', 'RFXJSIE', 1, 1);
+
+INSERT INTO veicoli (marca, tipo, targa, idAssicurazione, idPersona) VALUES
+('BMW', 'A5', 'BFRTPO45C', 1, 1);
+
+INSERT INTO incidenti (descrizione, longitudine, latitudine, data, ora, pathFoto) VALUES
+('Incidente accuduto Roccopolis', '40.785091', '-73.968285','2020-06-06', '12:52', 'C://Windows/Desktop');
+
+INSERT INTO ruoli (nome, descrizione, idPersona, idIncidente) VALUES
+('Testimone', 'Testimone visivo', '1', '1');
+
+INSERT INTO veicoliInIncidenti (idVeicolo, idIncidente) VALUES
+(2, 6);
+
+INSERT INTO veicoliInIncidenti (idVeicolo, idIncidente) VALUES
+(2, 2);

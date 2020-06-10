@@ -1,7 +1,7 @@
 <?php
 
 
-class VeicoliInIncidenti {
+class VeicoloInIncidente {
     private $idVeicoloInIncidente;
     private $idVeicolo;
     private $idIncidente;
