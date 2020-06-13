@@ -32,9 +32,8 @@ class PersonaDAO {
             $telefono = $riga['telefono'];
             $numPatente = $riga['numPatente'];
             $catPatente = $riga['catPatente'];
-            $ferito = $riga['ferito'];
 
-            $persona = new Persona($idPersona, $nome, $cognome, $dataNascita, $codFiscale, $indirizzo, $cap, $stato, $telefono, $numPatente, $catPatente, $ferito);
+            $persona = new Persona($idPersona, $nome, $cognome, $dataNascita, $codFiscale, $indirizzo, $cap, $stato, $telefono, $numPatente, $catPatente);
 
         } catch (PDOException $e) {
             throw $e;
@@ -66,9 +65,8 @@ class PersonaDAO {
                 $telefono = $riga['telefono'];
                 $numPatente = $riga['numPatente'];
                 $catPatente = $riga['catPatente'];
-                $ferito = $riga['ferito'];
 
-                $persona = new Persona($idPersona, $nome, $cognome, $dataNascita, $codFiscale, $indirizzo, $cap, $stato, $telefono, $numPatente, $catPatente, $ferito);
+                $persona = new Persona($idPersona, $nome, $cognome, $dataNascita, $codFiscale, $indirizzo, $cap, $stato, $telefono, $numPatente, $catPatente);
                 array_push($Vpersona, $persona);
             }
 
@@ -95,11 +93,10 @@ class PersonaDAO {
         $telefono = $persona->getTelefono();
         $numPatente = $persona->getNumPatente();
         $catPatente = $persona->getCatPatente();
-        $ferito = $persona->getFerito();
 
 
-        $sql = "INSERT INTO persone(nome, cognome, dataNascita, codFiscale, indirizzo, cap, stato, telefono, numPatente, catPatente, ferito)
-                VALUES (:nome, :cognome, :dataNascita, :codFiscale, :indirizzo, :cap, :stato, :telefono, :numPatente, :catPatente, :ferito)";
+        $sql = "INSERT INTO persone(nome, cognome, dataNascita, codFiscale, indirizzo, cap, stato, telefono, numPatente, catPatente)
+                VALUES (:nome, :cognome, :dataNascita, :codFiscale, :indirizzo, :cap, :stato, :telefono, :numPatente, :catPatente)";
 
         // Select per verificare se l'persona che si vuole inserire già esiste
         $sqlVer = "SELECT * FROM persone WHERE codFiscale = :codFiscale";
@@ -126,7 +123,6 @@ class PersonaDAO {
                 $stm->bindParam(':telefono', $telefono, PDO::PARAM_STR);
                 $stm->bindParam(':numPatente', $numPatente, PDO::PARAM_STR);
                 $stm->bindParam(':catPatente', $catPatente, PDO::PARAM_STR_CHAR);
-                $stm->bindParam(':ferito', $ferito, PDO::PARAM_BOOL);
                 $stm->execute();
 
                 echo "La Persona $nome, aggiunta con successo";
@@ -155,7 +151,6 @@ class PersonaDAO {
         $telefono = $persona->getTelefono();
         $numPatente = $persona->getNumPatente();
         $catPatente = $persona->getCatPatente();
-        $ferito = $persona->getFerito();
 
         try {
             $conn = Connection::getConnection();
@@ -178,8 +173,7 @@ class PersonaDAO {
                     "stato = :stato, " .
                     "telefono = :telefono, " .
                     "numPatente = :numPatente, " .
-                    "catPatente = :catPatente, " .
-                    "ferito = :ferito " .
+                    "catPatente = :catPatente " .
                     "WHERE idPersona = :id";
 
                 $stm = $conn->prepare($sql);
@@ -193,7 +187,6 @@ class PersonaDAO {
                 $stm->bindParam(':telefono', $telefono, PDO::PARAM_STR);
                 $stm->bindParam(':numPatente', $numPatente, PDO::PARAM_STR);
                 $stm->bindParam(':catPatente', $catPatente, PDO::PARAM_STR_CHAR);
-                $stm->bindParam(':ferito', $ferito, PDO::PARAM_BOOL);
                 $stm->bindParam(':id', $id, PDO::PARAM_INT);
                 $stm->execute();
 
@@ -235,6 +228,22 @@ class PersonaDAO {
                 return "La persona con id = $id e nome = $nome, è stato cancellata con successo";
             }
 
+        }   catch(PDOException $e){
+            throw $e;
+        }
+    }
+
+    public static function totPersone(){
+        $conn = Connection::getConnection();
+
+        try {
+            $sql = "SELECT COUNT(*) FROM persone";
+
+            $stm1 = $conn->prepare($sql);
+            $stm1->execute();
+            $number_of_rows = $stm1->fetchColumn();
+
+            return $number_of_rows;
         }   catch(PDOException $e){
             throw $e;
         }

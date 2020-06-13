@@ -4,17 +4,15 @@
 class Assicurazione {
     private $idAssicurazione;
     private $denominazione;
-    private $numPolizza;
     private $validita;
     private $indirizzo;
     private $telefono;
     private $email;
 
-    public function __construct($idAssicurazione, $denominazione, $numPolizza, $validita, $indirizzo, $telefono, $email)
+    public function __construct($idAssicurazione, $denominazione, $validita, $indirizzo, $telefono, $email)
     {
         $this->idAssicurazione = $idAssicurazione;
         $this->denominazione = $denominazione;
-        $this->numPolizza = $numPolizza;
         $this->validita = $validita;
         $this->indirizzo = $indirizzo;
         $this->telefono = $telefono;
@@ -39,16 +37,6 @@ class Assicurazione {
     public function setDenominazione($denominazione)
     {
         $this->denominazione = $denominazione;
-    }
-
-    public function getNumPolizza()
-    {
-        return $this->numPolizza;
-    }
-
-    public function setNumPolizza($numPolizza)
-    {
-        $this->numPolizza = $numPolizza;
     }
 
     public function getValidita()

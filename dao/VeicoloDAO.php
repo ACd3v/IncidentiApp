@@ -24,10 +24,11 @@ class VeicoloDAO {
             $marca = $riga['marca'];
             $tipo = $riga['tipo'];
             $targa = $riga['targa'];
+            $numPolizza = $riga['numPolizza'];
             $idAssicurazione = $riga['idAssicurazione'];
             $idPersona = $riga['idPersona'];
 
-            $veicolo = new Veicolo($idVeicolo, $marca, $tipo, $targa, $idAssicurazione, $idPersona);
+            $veicolo = new Veicolo($idVeicolo, $marca, $tipo, $targa, $numPolizza, $idAssicurazione, $idPersona);
 
         } catch (PDOException $e) {
             throw $e;
@@ -52,10 +53,11 @@ class VeicoloDAO {
                 $marca = $riga['marca'];
                 $tipo = $riga['tipo'];
                 $targa = $riga['targa'];
+                $numPolizza = $riga['numPolizza'];
                 $idAssicurazione = $riga['idAssicurazione'];
                 $idPersona = $riga['idPersona'];
 
-                $veicolo = new Veicolo($idVeicolo, $marca, $tipo, $targa, $idAssicurazione, $idPersona);
+                $veicolo = new Veicolo($idVeicolo, $marca, $tipo, $targa, $numPolizza, $idAssicurazione, $idPersona);
                 array_push($Vveicolo, $veicolo);
             }
 
@@ -76,11 +78,12 @@ class VeicoloDAO {
         $marca = $veicolo->getMarca();
         $tipo = $veicolo->getTipo();
         $targa = $veicolo->getTarga();
+        $numPolizza = $veicolo->getNumPolizza();
         $idAssicurazione = $veicolo->getIdAssicurazione();
         $idPersona = $veicolo->getIdPersona();
 
-        $sql = "INSERT INTO veicoli(marca, tipo, targa, idAssicurazione, idPersona)
-                VALUES (:marca, :tipo, :targa, :idAssicurazione, :idPersona)";
+        $sql = "INSERT INTO veicoli(marca, tipo, targa, numPolizza, idAssicurazione, idPersona)
+                VALUES (:marca, :tipo, :targa, :numPolizza, :idAssicurazione, :idPersona)";
 
         // Select per verificare se l'veicolo che si vuole inserire già esiste
         $sqlVer = "SELECT * FROM veicoli WHERE targa = :targa";
@@ -100,6 +103,7 @@ class VeicoloDAO {
                 $stm->bindParam(':marca', $marca, PDO::PARAM_STR);
                 $stm->bindParam(':tipo', $tipo, PDO::PARAM_STR);
                 $stm->bindParam(':targa', $targa, PDO::PARAM_STR);
+                $stm->bindParam(':numPolizza', $numPolizza, PDO::PARAM_STR);
                 $stm->bindParam(':idAssicurazione', $idAssicurazione, PDO::PARAM_INT);
                 $stm->bindParam(':idPersona', $idPersona, PDO::PARAM_INT);
                 $stm->execute();
@@ -123,6 +127,7 @@ class VeicoloDAO {
         $marca = $veicolo->getMarca();
         $tipo = $veicolo->getTipo();
         $targa = $veicolo->getTarga();
+        $numPolizza = $veicolo->getNumPolizza();
         $idAssicurazione = $veicolo->getIdAssicurazione();
         $idVeicolo = $veicolo->getIdVeicolo();
 
@@ -141,6 +146,7 @@ class VeicoloDAO {
                     "marca = :marca, " .
                     "tipo = :tipo, " .
                     "targa = :targa, " .
+                    "numPolizza = :numPolizza, " .
                     "idAssicurazione = :idAssicurazione, " .
                     "idVeicolo = :idVeicolo " .
                     "WHERE idVeicolo = :id";
@@ -149,6 +155,7 @@ class VeicoloDAO {
                 $stm->bindParam(':marca', $marca, PDO::PARAM_STR);
                 $stm->bindParam(':tipo', $tipo, PDO::PARAM_STR);
                 $stm->bindParam(':targa', $targa, PDO::PARAM_STR);
+                $stm->bindParam(':numPolizza', $numPolizza, PDO::PARAM_STR);
                 $stm->bindParam(':idAssicurazione', $idAssicurazione, PDO::PARAM_STR);
                 $stm->bindParam(':idVeicolo', $idVeicolo, PDO::PARAM_STR);
                 $stm->bindParam(':id', $id, PDO::PARAM_INT);
@@ -194,6 +201,22 @@ class VeicoloDAO {
                 return "$marca,$tipo con id = $id e targa = $targa, è stato cancellato con successo";
             }
 
+        }   catch(PDOException $e){
+            throw $e;
+        }
+    }
+
+    public static function totVeicoli(){
+        $conn = Connection::getConnection();
+
+        try {
+            $sql = "SELECT COUNT(*) FROM veicoli";
+
+            $stm1 = $conn->prepare($sql);
+            $stm1->execute();
+            $number_of_rows = $stm1->fetchColumn();
+
+            return $number_of_rows;
         }   catch(PDOException $e){
             throw $e;
         }

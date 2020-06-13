@@ -22,11 +22,12 @@ class RuoloDAO {
             }
 
             $nome = $riga['nome'];
+            $ferito = $riga['ferito'];
             $descrizione = $riga['descrizione'];
             $idPersona = $riga['idPersona'];
             $idIncidente = $riga['idIncidente'];
 
-            $ruolo = new Ruolo($idRuolo, $nome, $descrizione, $idPersona, $idIncidente);
+            $ruolo = new Ruolo($idRuolo, $nome, $ferito, $descrizione, $idPersona, $idIncidente);
 
         } catch (PDOException $e) {
             throw $e;
@@ -35,7 +36,7 @@ class RuoloDAO {
     }
 
     /***
-     * Restituisce l'elenco delle ruoli
+     * Restituisce l'elenco dei ruoli
      * @return Ruolo|array:Ruolo un array di oggetti Ruolo
      */
     public static function getElencoRuoli() {
@@ -49,11 +50,12 @@ class RuoloDAO {
 
                 $idRuolo = $riga['idRuolo'];
                 $nome = $riga['nome'];
+                $ferito = $riga['ferito'];
                 $descrizione = $riga['descrizione'];
                 $idPersona = $riga['idPersona'];
                 $idIncidente = $riga['idIncidente'];
 
-                $ruolo = new Ruolo($idRuolo, $nome, $descrizione, $idPersona, $idIncidente);
+                $ruolo = new Ruolo($idRuolo, $nome, $ferito, $descrizione, $idPersona, $idIncidente);
                 array_push($Vruolo, $ruolo);
             }
 
@@ -71,14 +73,15 @@ class RuoloDAO {
      */
     public static function aggiungiRuolo(Ruolo $ruolo) {
         $nome = $ruolo->getNome();
+        $ferito = $ruolo->getFerito();
         $descrizione = $ruolo->getDescrizione();
         $idPersona = $ruolo->getIdPersona();
         $idIncidente = $ruolo->getIdIncidente();
 
-        $sql = "INSERT INTO ruoli(nome, descrizione, idPersona, idIncidente)
-                VALUES (:nome, :descrizione, :idPersona, :idIncidente)";
+        $sql = "INSERT INTO ruoli(nome, ferito, descrizione, idPersona, idIncidente)
+                VALUES (:nome, :ferito, :descrizione, :idPersona, :idIncidente)";
 
-        // Select per verificare se l'Ruolo che si vuole inserire già esiste
+        // Select per verificare se il Ruolo che si vuole inserire già esiste
         $sqlVer = "SELECT * FROM ruoli WHERE nome = :nome";
 
         try {
@@ -94,12 +97,13 @@ class RuoloDAO {
             if($nomeVer != $nome) {
                 $stm = $conn->prepare($sql);
                 $stm->bindParam(':nome', $nome, PDO::PARAM_STR);
+                $stm->bindParam(':ferito', $ferito, PDO::PARAM_BOOL);
                 $stm->bindParam(':descrizione', $descrizione, PDO::PARAM_STR);
                 $stm->bindParam(':idPersona', $idPersona, PDO::PARAM_INT);
                 $stm->bindParam(':idIncidente', $idIncidente, PDO::PARAM_INT);
                 $stm->execute();
 
-                echo "Il Ruolo $nome, aggiunta con successo";
+                echo "Il Ruolo $nome, aggiunto con successo";
             } else {
                 return "Attenzione! Il Ruolo $nome, non può essere aggiunto perché è già stato inserito!";
             }
@@ -116,6 +120,7 @@ class RuoloDAO {
     public static function aggiornaRuolo(Ruolo $ruolo) {
         $id = $ruolo->getIdRuolo();
         $nome = $ruolo->getNome();
+        $ferito = $ruolo->getFerito();
         $descrizione = $ruolo->getDescrizione();
         $idPersona = $ruolo->getIdPersona();
         $idIncidente = $ruolo->getidIncidente();
@@ -129,10 +134,12 @@ class RuoloDAO {
             $stm1->bindParam(':idVer', $id, PDO::PARAM_INT);
             $stm1->execute();
 
+            // Mi assicuro che il ruolo che si vuole aggiornare sia presente nel db
             if ($stm1->fetchColumn() > 0) {
 
                 $sql = "UPDATE ruoli SET " .
                     "nome = :nome, " .
+                    "ferito = :ferito, " .
                     "descrizione = :descrizione, " .
                     "idPersona = :idPersona, " .
                     "idIncidente = :idIncidente " .
@@ -140,16 +147,17 @@ class RuoloDAO {
 
                 $stm = $conn->prepare($sql);
                 $stm->bindParam(':nome', $nome, PDO::PARAM_STR);
+                $stm->bindParam(':ferito', $ferito, PDO::PARAM_BOOL);
                 $stm->bindParam(':descrizione', $descrizione, PDO::PARAM_STR);
                 $stm->bindParam(':idPersona', $idPersona, PDO::PARAM_INT);
                 $stm->bindParam(':idIncidente', $idIncidente, PDO::PARAM_INT);
                 $stm->bindParam(':id', $id, PDO::PARAM_INT);
                 $stm->execute();
 
-                return "Il Ruolo $nome, è stata aggiornato con successo!";
+                return "Il Ruolo $nome, è stato aggiornato con successo!";
 
             } else {
-                // Se l'Ruolo non è stato inserito, arresto l'esecuzione e restituisco l'errore
+                // Se il Ruolo non è stato inserito, arresto l'esecuzione e restituisco l'errore
                 return "Attenzione! Il Ruolo che stai cercando di aggiornare non esiste!";
             }
         } catch (PDOException $e) {
@@ -157,6 +165,11 @@ class RuoloDAO {
         }
     }
 
+    /***
+     * Cancella il ruolo che corrisponde all'id passato come parametro
+     * @param int $id
+     * @return string
+     */
     public static function cancellaRuolo(int $id){
         $conn = Connection::getConnection();
 
@@ -168,15 +181,15 @@ class RuoloDAO {
             $stm->execute();
 
             if (!$riga = $stm->fetch(PDO::FETCH_ASSOC)) {
-                // Se l'Ruolo non è stata inserita arresto l'esecuzione e restituisco l'errore
+                // Se il Ruolo non è stato inserito, arresto l'esecuzione e restituisco l'errore
                 return "Attenzione! Il Ruolo che stai cercando di eliminare non esiste!";
             } else {
                 $sql = "DELETE FROM ruoli WHERE idRuolo = :id";
 
-                // Prelevo il nome dell'Ruolo per l'output
+                // Prelevo il nome del Ruolo per l'output
                 $nome = $riga['nome'];
 
-                // Se l'Ruolo è stato inserita procedo ad eliminarla
+                // Se il Ruolo è stato inserito, procedo ad eliminarlo
                 $stm1 = $conn->prepare($sql);
                 $stm1->bindParam(':id', $id, PDO::PARAM_INT);
                 $stm1->execute();
@@ -189,3 +202,4 @@ class RuoloDAO {
         }
     }
 }
+

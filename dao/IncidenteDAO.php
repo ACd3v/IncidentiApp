@@ -202,4 +202,20 @@ class IncidenteDAO {
             throw $e;
         }
     }
+
+    public static function totIncidenti(){
+        $conn = Connection::getConnection();
+
+        try {
+            $sql = "SELECT COUNT(*) FROM incidenti";
+
+            $stm1 = $conn->prepare($sql);
+            $stm1->execute();
+            $number_of_rows = $stm1->fetchColumn();
+
+            return $number_of_rows;
+        }   catch(PDOException $e){
+            throw $e;
+        }
+    }
 }

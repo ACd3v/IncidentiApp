@@ -14,7 +14,6 @@ $stato = $persona->getStato();
 $telefono = $persona->getTelefono();
 $numPatente = $persona->getNumPatente();
 $catPatente = $persona->getCatPatente();
-$ferito = $persona->getFerito();
 
 echo "$nome <br> 
     $cognome <br>
@@ -25,8 +24,7 @@ echo "$nome <br>
     $stato <br>
     $telefono <br>
     $numPatente <br>  
-    $catPatente <br>
-    $ferito <br>";*/
+    $catPatente <br>"; */
 
 //----------------------------------------------------
 
@@ -43,7 +41,6 @@ foreach ($elencoPersone as $persona) {
     echo "Telefono = " .$persona->getTelefono(). "<br>";
     echo "numPatente = " .$persona->getnumPatente(). "<br>";
     echo "catPatente = " .$persona->getcatPatente(). "<br>";
-    echo "Ferito = " .$persona->getFerito(). "<br>";
 } */
 
 //----------------------------------------------------
@@ -51,7 +48,7 @@ foreach ($elencoPersone as $persona) {
 /* aggiungiPersona() - OK
 //L'id non è importante perché poi non verrà utilizzato, ma si seguirà l'AUTO_INCREMENT
 //Da ricordare che bisogna passare l'idCitta, quindi via frontend bisogna ottenerlo
-$persona = new Persona(null,'Test','Testina', '1999-06-26', 'TSTCLR45S5', 'Via Ambiente 42', '45268', 'Italia', '3465296874','45F23', 'B', TRUE);
+$persona = new Persona(null,'Test','Testina', '1999-06-26', 'TSTCLR45S5', 'Via Ambiente 42', '45268', 'Italia', '3465296874','45F23', 'B');
 $add = PersonaDAO::aggiungiPersona($persona);
 echo "$add";
 */
@@ -59,14 +56,17 @@ echo "$add";
 //----------------------------------------------------
 
 /* aggiornaPersona() - OK
-$persona = new Persona(1,'Test01','Testilone','2002-02-08', 'TSRTO05F','Via Roma 41', '56325', 'Romania', '3465296874','2689S', 'A', FALSE);
+$persona = new Persona(1,'Test01','Testilone','2002-02-08', 'TSRTO05F','Via Roma 41', '56325', 'Romania', '3465296874','2689S', 'A');
 $o = PersonaDAO::aggiornaPersona($persona);
 echo "$o";
 */
 
 //----------------------------------------------------
-// cancellaPersona() - OK
+/* cancellaPersona() - OK
 $cancella = PersonaDAO::cancellaPersona(4);
 echo "$cancella";
-//
+*/
 //----------------------------------------------------
+/*
+$numPersone = PersonaDAO::totPersone();
+echo "$numPersone"; */

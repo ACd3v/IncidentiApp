@@ -22,13 +22,12 @@ class AssicurazioneDAO {
             }
 
             $denominazione = $riga['denominazione'];
-            $numPolizza = $riga['numPolizza'];
             $validita = $riga['validita'];
             $indirizzo = $riga['indirizzo'];
             $telefono = $riga['telefono'];
             $email = $riga['email'];
 
-            $assicurazione = new Assicurazione($idAssicurazione, $denominazione, $numPolizza, $validita, $indirizzo, $telefono, $email);
+            $assicurazione = new Assicurazione($idAssicurazione, $denominazione, $validita, $indirizzo, $telefono, $email);
 
         } catch (PDOException $e) {
             throw $e;
@@ -51,13 +50,12 @@ class AssicurazioneDAO {
 
                 $idAssicurazione= $riga['idAssicurazione'];
                 $denominazione = $riga['denominazione'];
-                $numPolizza = $riga['numPolizza'];
                 $validita = $riga['validita'];
                 $indirizzo = $riga['indirizzo'];
                 $telefono = $riga['telefono'];
                 $email = $riga['email'];
 
-                $assicurazione = new Assicurazione($idAssicurazione, $denominazione, $numPolizza, $validita, $indirizzo, $telefono, $email);
+                $assicurazione = new Assicurazione($idAssicurazione, $denominazione, $validita, $indirizzo, $telefono, $email);
                 array_push($Vassicurazione, $assicurazione);
             }
 
@@ -75,14 +73,13 @@ class AssicurazioneDAO {
      */
     public static function aggiungiAssicurazione(Assicurazione $assicurazione) {
         $denominazione = $assicurazione->getDenominazione();
-        $numPolizza = $assicurazione->getNumPolizza();
         $validita = $assicurazione->getValidita();
         $indirizzo = $assicurazione->getIndirizzo();
         $telefono = $assicurazione->getTelefono();
         $email = $assicurazione->getEmail();
 
-        $sql = "INSERT INTO assicurazioni(denominazione, numPolizza, validita, indirizzo, telefono, email)
-                VALUES (:denominazione, :numPolizza, :validita, :indirizzo, :telefono, :email)";
+        $sql = "INSERT INTO assicurazioni(denominazione, validita, indirizzo, telefono, email)
+                VALUES (:denominazione, :validita, :indirizzo, :telefono, :email)";
 
         // Select per verificare se l'assicurazione che si vuole inserire già esiste
         $sqlVer = "SELECT * FROM assicurazioni WHERE denominazione=:denominazione";
@@ -100,7 +97,6 @@ class AssicurazioneDAO {
             if($denominazioneVer != $denominazione) {
             $stm = $conn->prepare($sql);
             $stm->bindParam(':denominazione', $denominazione, PDO::PARAM_STR);
-            $stm->bindParam(':numPolizza', $numPolizza, PDO::PARAM_STR);
             $stm->bindParam(':validita', $validita, PDO::PARAM_BOOL);
             $stm->bindParam(':indirizzo', $indirizzo, PDO::PARAM_STR);
             $stm->bindParam(':telefono', $telefono, PDO::PARAM_STR);
@@ -124,7 +120,6 @@ class AssicurazioneDAO {
     public static function aggiornaAssicurazione(Assicurazione $assicurazione){
         $id = $assicurazione->getIdAssicurazione();
         $denominazione = $assicurazione->getDenominazione();
-        $numPolizza = $assicurazione->getNumPolizza();
         $validita = $assicurazione->getValidita();
         $indirizzo = $assicurazione->getIndirizzo();
         $telefono = $assicurazione->getTelefono();
@@ -143,7 +138,6 @@ class AssicurazioneDAO {
 
                 $sql = "UPDATE assicurazioni SET " .
                     "denominazione = :denominazione, " .
-                    "numPolizza = :numPolizza, " .
                     "validita = :validita, " .
                     "indirizzo = :indirizzo, " .
                     "telefono = :telefono, " .
@@ -152,7 +146,6 @@ class AssicurazioneDAO {
 
                 $stm = $conn->prepare($sql);
                 $stm->bindParam(':denominazione', $denominazione, PDO::PARAM_STR);
-                $stm->bindParam(':numPolizza', $numPolizza, PDO::PARAM_STR);
                 $stm->bindParam(':validita', $validita, PDO::PARAM_BOOL);
                 $stm->bindParam(':indirizzo', $indirizzo, PDO::PARAM_STR);
                 $stm->bindParam(':telefono', $telefono, PDO::PARAM_STR);

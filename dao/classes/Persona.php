@@ -13,9 +13,8 @@ class Persona   {
     private $telefono;
     private $numPatente;
     private $catPatente;
-    private $ferito;
 
-    public function __construct($idPersona, $nome, $cognome, $dataNascita, $codFiscale, $indirizzo, $cap, $stato, $telefono, $numPatente, $catPatente, $ferito)
+    public function __construct($idPersona, $nome, $cognome, $dataNascita, $codFiscale, $indirizzo, $cap, $stato, $telefono, $numPatente, $catPatente)
     {
         $this->idPersona = $idPersona;
         $this->nome = $nome;
@@ -28,7 +27,6 @@ class Persona   {
         $this->telefono = $telefono;
         $this->numPatente = $numPatente;
         $this->catPatente = $catPatente;
-        $this->ferito = $ferito;
     }
 
     public function getIdPersona()
@@ -140,16 +138,4 @@ class Persona   {
     {
         $this->catPatente = $catPatente;
     }
-
-    public function getFerito()
-    {
-        return $this->ferito;
-    }
-
-    public function setFerito($ferito)
-    {
-        $this->ferito = $ferito;
-    }
-
-
 }

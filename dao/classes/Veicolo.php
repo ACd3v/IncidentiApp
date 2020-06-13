@@ -6,15 +6,17 @@ class Veicolo   {
     private $marca;
     private $tipo;
     private $targa;
+    private $numPolizza;
     private $idAssicurazione;
     private $idPersona;
 
-    public function __construct($idVeicolo, $marca, $tipo, $targa, $idAssicurazione, $idPersona)
+    public function __construct($idVeicolo, $marca, $tipo, $targa, $numPolizza, $idAssicurazione, $idPersona)
     {
         $this->idVeicolo = $idVeicolo;
         $this->marca = $marca;
         $this->tipo = $tipo;
         $this->targa = $targa;
+        $this->numPolizza = $numPolizza;
         $this->idAssicurazione = $idAssicurazione;
         $this->idPersona = $idPersona;
     }
@@ -52,6 +54,16 @@ class Veicolo   {
     public function getTarga()
     {
         return $this->targa;
+    }
+
+    public function getNumPolizza()
+    {
+        return $this->numPolizza;
+    }
+
+    public function setNumPolizza($numPolizza)
+    {
+        $this->numPolizza = $numPolizza;
     }
 
     public function setTarga($targa)
