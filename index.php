@@ -213,81 +213,84 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                                 <li>
                                     <a href="forget-pass.html">Veicolo</a>
                                 </li>
+                                <li>
+                                    <a href="forget-pass.html">Assicurazione</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                                <i class="fas fa-car"></i>Associa Veicolo ad un Incidente</a>
                         </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
+<!--                        <li>-->
+<!--                            <a href="table.html">-->
+<!--                                <i class="fas fa-table"></i>Tables</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="form.html">-->
+<!--                                <i class="far fa-check-square"></i>Forms</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="calendar.html">-->
+<!--                                <i class="fas fa-calendar-alt"></i>Calendar</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="map.html">-->
+<!--                                <i class="fas fa-map-marker-alt"></i>Maps</a>-->
+<!--                        </li>-->
+<!--                        <li class="has-sub">-->
+<!--                            <a class="js-arrow" href="#">-->
+<!--                                <i class="fas fa-copy"></i>Pages</a>-->
+<!--                            <ul class="list-unstyled navbar__sub-list js-sub-list">-->
+<!--                                <li>-->
+<!--                                    <a href="login.html">Login</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="register.html">Register</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="forget-pass.html">Forget Password</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li class="has-sub">-->
+<!--                            <a class="js-arrow" href="#">-->
+<!--                                <i class="fas fa-desktop"></i>UI Elements</a>-->
+<!--                            <ul class="list-unstyled navbar__sub-list js-sub-list">-->
+<!--                                <li>-->
+<!--                                    <a href="button.html">Button</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="badge.html">Badges</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="tab.html">Tabs</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="card.html">Cards</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="alert.html">Alerts</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="progress-bar.html">Progress Bars</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="modal.html">Modals</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="switch.html">Switchs</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="grid.html">Grids</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="fontawesome.html">Fontawesome Icon</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="typo.html">Typography</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
                         </li>
                     </ul>
                 </nav>
@@ -323,11 +326,11 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <?php
-                                                $totPersone = PersonaDAO::totPersone();
-                                                echo "<h2>$totPersone</h2>"
-                                                ?>
-<!--                                                <h2>10368</h2>-->
+<!--                                                --><?php
+//                                                $totPersone = PersonaDAO::totPersone();
+//                                                echo "<h2>$totPersone</h2>"
+//                                                ?>
+                                                <h2>15</h2>
                                                 <span>Persone registrate</span>
                                             </div>
                                         </div>
@@ -363,11 +366,11 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                                                 <i class="zmdi zmdi-alert-polygon"></i>
                                             </div>
                                             <div class="text">
-                                                <?php
-                                                $totIncidenti = IncidenteDAO::totIncidenti();
-                                                echo "<h2>$totIncidenti</h2>"
-                                                ?>
-<!--                                                <h2>1,086</h2>-->
+<!--                                                --><?php
+//                                                $totIncidenti = IncidenteDAO::totIncidenti();
+//                                                echo "<h2>$totIncidenti</h2>"
+//                                                ?>
+                                                <h2>13</h2>
                                                 <span>Incidenti registrati</span>
                                             </div>
                                         </div>
@@ -385,11 +388,11 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                                                 <i class="zmdi zmdi-car"></i>
                                             </div>
                                             <div class="text">
-                                                <?php
-                                                $totVeicoli = VeicoloDAO::totVeicoli();
-                                                echo "<h2>$totVeicoli</h2>"
-                                                ?>
-<!--                                                <h2>$1,060,386</h2>-->
+<!--                                                --><?php
+//                                                $totVeicoli = VeicoloDAO::totVeicoli();
+//                                                echo "<h2>$totVeicoli</h2>"
+//                                                ?>
+                                                <h2>28</h2>
                                                 <span>Veicoli registrati</span>
                                             </div>
                                         </div>
@@ -464,7 +467,7 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
 <!--                        </div>-->
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Incidenti</h2>
+                                <h2 class="title-1 m-b-25">Ultimi 3 Incidenti</h2>
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
@@ -484,7 +487,7 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                                                 echo "<tr>";
                                                 echo "<td>".$incidente->getData()." ".$incidente->getOra()."</td>";
                                                 echo "<td>" . $incidente->getIdIncidente() . "</td>";
-                                                echo "<td>" .$incidente->getDescrizione()."</td>";
+                                                echo "<td>2020-07-22 06:34:00</td>";
                                                 echo "<td>" .$incidente->getLongitudine(). "</td>";
                                                 echo "<td>" .$incidente->getLatitudine(). "</td>";
 //                                                echo "<td>" .$incidente->getPathFoto(). "</td>";

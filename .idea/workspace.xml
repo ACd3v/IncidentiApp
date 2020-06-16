@@ -2,53 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/headerDesktop.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/headerMobile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menuDesktop.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menuMobile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personaForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendorsFooter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendorsHeaders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/alert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badge.html" beforeDir="false" afterPath="$PROJECT_DIR$/badge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/button.html" beforeDir="false" afterPath="$PROJECT_DIR$/button.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/chart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/AssicurazioneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/AssicurazioneDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/IncidenteDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/IncidenteDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/PersonaDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/PersonaDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/RuoloDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/RuoloDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/VeicoloDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/VeicoloDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/classes/Assicurazione.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/classes/Assicurazione.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/classes/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/classes/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/classes/Persona.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/classes/Persona.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/classes/Ruolo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/classes/Ruolo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/classes/Veicolo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/classes/Veicolo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/db2.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/db2.0.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fontawesome.html" beforeDir="false" afterPath="$PROJECT_DIR$/fontawesome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/grid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/inbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/index3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index4.html" beforeDir="false" afterPath="$PROJECT_DIR$/index4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap-datetimepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/progress-bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/progress-bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/switch.html" beforeDir="false" afterPath="$PROJECT_DIR$/switch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tab.html" beforeDir="false" afterPath="$PROJECT_DIR$/tab.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testAssicurazioneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/testAssicurazioneDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testPersonaDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/testPersonaDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testRuoloDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/testRuoloDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testVeicoloDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/testVeicoloDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typo.html" beforeDir="false" afterPath="$PROJECT_DIR$/typo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headerDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/headerDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menuDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/menuDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personaForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/personaForm.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +55,9 @@
       <workItem from="1591856369059" duration="13856000" />
       <workItem from="1591999175430" duration="799000" />
       <workItem from="1592032670419" duration="20257000" />
-      <workItem from="1592071918005" duration="2875000" />
+      <workItem from="1592071918005" duration="4148000" />
+      <workItem from="1592076340740" duration="4521000" />
+      <workItem from="1592329594867" duration="931000" />
     </task>
     <servers />
   </component>
@@ -124,18 +85,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591862199470" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1592071078461">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1592076322281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592071078461" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592076322281" />
     <state width="82" height="523" key="SqlResolveConfigurable" timestamp="1592073941916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="82" height="523" key="SqlResolveConfigurable/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592073941916" />
-    <state x="364" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592071918327">
+    <state x="364" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592330587311">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592071918327" />
+    <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592330587311" />
     <state x="606" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591866441757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

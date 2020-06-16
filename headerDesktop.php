@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="header-wrap">
                 <form class="form-header" action="" method="POST">
-                    <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                    <input class="au-input au-input--xl" type="text" name="search" placeholder="Cerca dati all'interno dell'archivio" />
                     <button class="au-btn--submit" type="submit">
                         <i class="zmdi zmdi-search"></i>
                     </button>
@@ -125,16 +125,16 @@
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
                             <div class="image">
-                                <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                <img src="images/icon/poliziotto360.png" alt="John Doe" />
                             </div>
                             <div class="content">
-                                <a class="js-acc-btn" href="#">john doe</a>
+                                <a class="js-acc-btn" href="#">Agente 1</a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            <img src="images/icon/poliziotto.jpg" alt="Agente 1" />
                                         </a>
                                     </div>
                                     <div class="content">

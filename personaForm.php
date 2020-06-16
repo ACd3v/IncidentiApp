@@ -69,26 +69,30 @@ include_once "menuDesktop.php";
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="chart.html">
-                            <i class="fas fa-chart-bar"></i>Charts</a>
-                    </li>
-                    <li>
-                        <a href="table.html">
-                            <i class="fas fa-table"></i>Tables</a>
-                    </li>
-                    <li>
-                        <a href="form.html">
-                            <i class="far fa-check-square"></i>Forms</a>
-                    </li>
-                    <li>
-                        <a href="calendar.html">
-                            <i class="fas fa-calendar-alt"></i>Calendar</a>
-                    </li>
-                    <li>
-                        <a href="map.html">
-                            <i class="fas fa-map-marker-alt"></i>Maps</a>
-                    </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-car"></i>Associa Veicolo ad un Incidente</a>
+                        </li>
+<!--                    <li>-->
+<!--                        <a href="chart.html">-->
+<!--                            <i class="fas fa-chart-bar"></i>Charts</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="table.html">-->
+<!--                            <i class="fas fa-table"></i>Tables</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="form.html">-->
+<!--                            <i class="far fa-check-square"></i>Forms</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="calendar.html">-->
+<!--                            <i class="fas fa-calendar-alt"></i>Calendar</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="map.html">-->
+<!--                            <i class="fas fa-map-marker-alt"></i>Maps</a>-->
+<!--                    </li>-->
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
                             <i class="fas fa-copy"></i>Pages</a>
@@ -157,7 +161,7 @@ include_once "menuDesktop.php";
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Cerca dati all'interno dell'archivio" />
                             <button class="au-btn--submit" type="submit">
                                 <i class="zmdi zmdi-search"></i>
                             </button>
@@ -166,10 +170,10 @@ include_once "menuDesktop.php";
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                        <img src="images/icon/poliziotto360.png" alt="John Doe" />
                                     </div>
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">john doe</a>
+                                        <a class="js-acc-btn" href="#">Agente 1</a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
                                         <div class="info clearfix">

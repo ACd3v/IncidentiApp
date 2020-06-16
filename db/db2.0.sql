@@ -27,8 +27,6 @@ CREATE TABLE persone (
     telefono VARCHAR(15) NOT NULL,
     numPatente VARCHAR(15) NOT NULL,
     catPatente CHAR NOT NULL,
-    UNIQUE (nome),
-    UNIQUE (cognome),
     UNIQUE (codFiscale)
 );
 
