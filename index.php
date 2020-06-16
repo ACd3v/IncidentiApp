@@ -49,7 +49,6 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
             include_once __DIR__ .'/components/headerDesktop.php';
             include_once __DIR__ . '/components/sidebarDesktop.php';
             ?>
-
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -225,7 +224,7 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                 </div>
             </div>
             <!-- END MAIN CONTENT-->
-            <!-- END PAGE CONTAINER-->
+        <!-- END PAGE CONTAINER-->
         </div>
 
     </div>

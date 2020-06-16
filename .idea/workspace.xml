@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/headerMobile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headerDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerDesktop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headerMobile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/headerMobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerMobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sidebarDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menuDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/menuDesktop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menuMobile.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/personaForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/personaForm.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +59,7 @@
       <workItem from="1592032670419" duration="20257000" />
       <workItem from="1592071918005" duration="4148000" />
       <workItem from="1592076340740" duration="4521000" />
-      <workItem from="1592329594867" duration="3999000" />
+      <workItem from="1592329594867" duration="4914000" />
     </task>
     <servers />
   </component>

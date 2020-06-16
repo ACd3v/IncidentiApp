@@ -9,22 +9,8 @@
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
                 <li class="active has-sub">
-                    <a class="js-arrow" href="#">
+                    <a class="js-arrow" href="index.php">
                         <i class="fas fa-tachometer-alt"></i>Cruscotto</a>
-                    <ul class="list-unstyled navbar__sub-list js-sub-list">
-                        <li>
-                            <a href="index.php">Dashboard 1</a>
-                        </li>
-                        <li>
-                            <a href="index2.html">Dashboard 2</a>
-                        </li>
-                        <li>
-                            <a href="index3.html">Dashboard 3</a>
-                        </li>
-                        <li>
-                            <a href="index4.html">Dashboard 4</a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
