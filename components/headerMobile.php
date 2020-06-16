@@ -34,7 +34,14 @@
                         <li>
                             <a href="forget-pass.html">Veicolo</a>
                         </li>
+                        <li>
+                            <a href="forget-pass.html">Assicurazione</a>
+                        </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="chart.html">
+                        <i class="fas fa-car"></i>Associa Veicolo ad un Incidente</a>
                 </li>
             </ul>
         </div>

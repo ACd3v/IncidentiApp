@@ -1,7 +1,7 @@
 <!-- MENU SIDEBAR-->
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
-        <a href="#">
+        <a href="index.php">
             <img src="images/icon/police178x52.png" alt="Cool Admin" />
         </a>
     </div>
@@ -12,9 +12,9 @@
                     <a class="js-arrow" href="index.php">
                         <i class="fas fa-tachometer-alt"></i>Cruscotto</a>
                 </li>
-                <li class="has-sub">
-                    <a class="js-arrow" href="#">
-                        <i class="fas fa-plus"></i>Carica</a>
+                <li>
+                <a class="js-arrow" href="#">
+                <i class="fas fa-plus"></i>Carica</a>
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
                             <a href="personaForm.php">Persona</a>

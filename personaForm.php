@@ -7,7 +7,6 @@
     <?php
         include_once "vendorsHeaders.php";
     ?>
-
     <title>Aggiungi Persona</title>
 </head>
 
@@ -19,7 +18,7 @@
     <!-- PAGE CONTAINER-->
     <div class="page-container">
         <?php
-        include_once __DIR__ .'/components/headerDesktop.php';
+        include_once __DIR__ . '/components/headerDesktop.php';
         include_once __DIR__ . '/components/sidebarDesktop.php';
         ?>
         <!-- MAIN CONTENT-->
@@ -33,90 +32,90 @@
                                     <strong>Aggiungi Persona</strong>
                                 </div>
                                 <div class="card-body card-block">
-                                    <form action="elabora.php" method="post">
+                                    <form action="controllers/personaController.php" method="post">
                                         <div class="row form-group">
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="company" class=" form-control-label">Nome</label>
-                                                    <input type="text" id="company" placeholder="Inserisci il tuo Nome" class="form-control">
+                                                    <input type="text" id="company" placeholder="Inserisci il tuo Nome" class="form-control" name="nome">
                                                 </div>
                                             </div>
                                             <div class='col-sm-6'>
                                                 <div class="form-group">
                                                     <label for="vat" class=" form-control-label">Cognome</label>
-                                                    <input type="text" id="vat" placeholder="Inserisci il tuo Cognome" class="form-control">
+                                                    <input type="text" id="vat" placeholder="Inserisci il tuo Cognome" class="form-control" name="cognome">
                                                 </div>
                                             </div>
                                             <div class='col-sm-6'>
                                                 <label for="vat" class=" form-control-label">Data di Nascita</label>
                                                 <div id="calendario">
                                                 <div class="input-group date" >
-                                                    <input type="text" class="form-control"><span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+                                                    <input type="text" class="form-control" name="dataNascita"><span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="city" class=" form-control-label">Codice Fiscale</label>
-                                                    <input type="text" id="city" placeholder="Inserisci il tuo Codice Fiscale" class="form-control">
+                                                    <input type="text" id="city" placeholder="Inserisci il tuo Codice Fiscale" class="form-control" name="codFiscale">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="postal-code" class=" form-control-label">Indirizzo</label>
-                                                    <input type="text" id="postal-code" placeholder="Inserisci il tuo Indirizzo" class="form-control">
+                                                    <input type="text" id="postal-code" placeholder="Inserisci il tuo Indirizzo" class="form-control" name="indirizzo">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="postal-code" class=" form-control-label">Cap</label>
-                                                    <input type="text" id="postal-code" placeholder="Inserisci il tuo Cap" class="form-control">
+                                                    <input type="text" id="postal-code" placeholder="Inserisci il tuo Cap" class="form-control" name="cap">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="country" class=" form-control-label">Stato</label>
-                                                    <input type="text" id="country" placeholder="Inserisci il tuo Stato" class="form-control">
+                                                    <input type="text" id="country" placeholder="Inserisci il tuo Stato" class="form-control" name="stato">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="country" class=" form-control-label">Telefono</label>
-                                                    <input type="text" id="country" placeholder="Inserisci il tuo Telefono" class="form-control">
+                                                    <input type="text" id="country" placeholder="Inserisci il tuo Telefono" class="form-control" name="telefono">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="postal-code" class=" form-control-label">Numero Patente</label>
-                                                    <input type="text" id="postal-code" placeholder="Inserisci il Numero della Patente" class="form-control">
+                                                    <input type="text" id="postal-code" placeholder="Inserisci il Numero della Patente" class="form-control" name="numPatente">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <label for="postal-code" class=" form-control-label">Categoria Patente</label>
-                                                    <select name="select" id="select" class="form-control">
+                                                    <select name="catPatente" id="select" class="form-control">
                                                         <option value="0">Seleziona</option>
                                                         <option value="1">A</option>
                                                         <option value="2">B</option>
                                                         <option value="3">C</option>
                                                     </select>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <label for="country" class=" form-control-label">Ferito</label>
-                                                    <div class="form-check">
-                                                        <div class="radio">
-                                                            <label for="radio1" class="form-check-label ">
-                                                                <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Si
-                                                            </label>
-                                                        </div>
-                                                        <div class="radio">
-                                                            <label for="radio2" class="form-check-label ">
-                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">No
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+<!--                                            <div class="col-6">-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <label for="country" class=" form-control-label">Ferito</label>-->
+<!--                                                    <div class="form-check">-->
+<!--                                                        <div class="radio">-->
+<!--                                                            <label for="radio1" class="form-check-label ">-->
+<!--                                                                <input type="radio" id="radio1" name="feritoSi" value="Ferito" class="form-check-input">Si-->
+<!--                                                            </label>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="radio">-->
+<!--                                                            <label for="radio2" class="form-check-label ">-->
+<!--                                                                <input type="radio" id="radio2" name="feritoNo" value="Non ferito" class="form-check-input">No-->
+<!--                                                            </label>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
                                         </div>
 <!--                                        <input type="submit" name="btn_invia" value="Invia">-->
                                         <button type="submit" class="btn btn-success btn-sm">Invia</button>
@@ -132,7 +131,7 @@
 </div>
 
 <?php
-    include_once "vendorsFooter.php"
+include_once "vendorsFooter.php"
 ?>
 
 <script type="text/javascript">
