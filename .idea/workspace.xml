@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/headerMobile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db2.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/db2.0.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headerDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/headerDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headerDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headerMobile.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menuDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/menuDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menuDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/menuDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menuMobile.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/personaForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/personaForm.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +38,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\dao\classes" />
     </key>
@@ -57,7 +63,7 @@
       <workItem from="1592032670419" duration="20257000" />
       <workItem from="1592071918005" duration="4148000" />
       <workItem from="1592076340740" duration="4521000" />
-      <workItem from="1592329594867" duration="931000" />
+      <workItem from="1592329594867" duration="3999000" />
     </task>
     <servers />
   </component>
@@ -77,14 +83,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="558" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591807169443" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592333978012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592333978012" />
     <state x="720" y="318" key="NewPhpClassDialog" timestamp="1591792724686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="318" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591792724686" />
-    <state x="795" y="439" key="NewPhpFileDialog" timestamp="1591862199470">
+    <state x="795" y="439" key="NewPhpFileDialog" timestamp="1592331874450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="795" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591862199470" />
+    <state x="795" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592331874450" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1592076322281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

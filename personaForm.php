@@ -13,7 +13,7 @@
 <body class="animsition">
 
 <?php
-include_once "menuDesktop.php";
+include_once __DIR__ ."/components/sidebarDesktop.php";
 ?>
 <!-- PAGE CONTAINER-->
 <div class="page-wrapper">
