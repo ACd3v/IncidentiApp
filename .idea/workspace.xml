@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/personaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/incidenteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/headerDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerDesktop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/headerMobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerMobile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sidebarDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/personaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/personaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personaForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/personaForm.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +20,14 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -30,19 +38,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dao/classes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\controllers" />
+      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\dao\classes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp" />
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\pages" />
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\dao\classes" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -63,7 +74,10 @@
       <workItem from="1592032670419" duration="20257000" />
       <workItem from="1592071918005" duration="4148000" />
       <workItem from="1592076340740" duration="4521000" />
-      <workItem from="1592329594867" duration="9630000" />
+      <workItem from="1592329594867" duration="9687000" />
+      <workItem from="1592391004824" duration="7899000" />
+      <workItem from="1592468574114" duration="5882000" />
+      <workItem from="1592497597237" duration="6033000" />
     </task>
     <servers />
   </component>
@@ -103,10 +117,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="82" height="523" key="SqlResolveConfigurable/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592073941916" />
-    <state x="364" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592330587311">
+    <state x="364" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592497599004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592330587311" />
+    <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592497599004" />
+    <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1592468683499" />
     <state x="606" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591866441757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

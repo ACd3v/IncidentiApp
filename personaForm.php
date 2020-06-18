@@ -32,94 +32,83 @@
                                     <strong>Aggiungi Persona</strong>
                                 </div>
                                 <div class="card-body card-block">
-                                    <form action="controllers/personaController.php" method="post">
+                                    <form>
                                         <div class="row form-group">
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="company" class=" form-control-label">Nome</label>
-                                                    <input type="text" id="company" placeholder="Inserisci il tuo Nome" class="form-control" name="nome">
+                                                    <input type="text" id="nome" placeholder="Inserisci il tuo Nome" class="form-control" name="nome" required>
                                                 </div>
                                             </div>
                                             <div class='col-sm-6'>
                                                 <div class="form-group">
                                                     <label for="vat" class=" form-control-label">Cognome</label>
-                                                    <input type="text" id="vat" placeholder="Inserisci il tuo Cognome" class="form-control" name="cognome">
+                                                    <input type="text" id="cognome" placeholder="Inserisci il tuo Cognome" class="form-control" name="cognome" required>
                                                 </div>
                                             </div>
                                             <div class='col-sm-6'>
                                                 <label for="vat" class=" form-control-label">Data di Nascita</label>
                                                 <div id="calendario">
                                                 <div class="input-group date" >
-                                                    <input type="text" class="form-control" name="dataNascita"><span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+                                                    <input type="text" id="dataNascita" class="form-control" name="dataNascita"><span class="input-group-addon"><i class="fas fa-calendar-alt" required></i></span>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="city" class=" form-control-label">Codice Fiscale</label>
-                                                    <input type="text" id="city" placeholder="Inserisci il tuo Codice Fiscale" class="form-control" name="codFiscale">
+                                                    <input type="text" id="codFiscale" placeholder="Inserisci il tuo Codice Fiscale" class="form-control" name="codFiscale" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="postal-code" class=" form-control-label">Indirizzo</label>
-                                                    <input type="text" id="postal-code" placeholder="Inserisci il tuo Indirizzo" class="form-control" name="indirizzo">
+                                                    <input type="text" id="indirizzo" placeholder="Inserisci il tuo Indirizzo" class="form-control" name="indirizzo" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="postal-code" class=" form-control-label">Cap</label>
-                                                    <input type="text" id="postal-code" placeholder="Inserisci il tuo Cap" class="form-control" name="cap">
+                                                    <input type="text" id="cap" placeholder="Inserisci il tuo Cap" class="form-control" name="cap" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="country" class=" form-control-label">Stato</label>
-                                                    <input type="text" id="country" placeholder="Inserisci il tuo Stato" class="form-control" name="stato">
+                                                    <input type="text" id="stato" placeholder="Inserisci il tuo Stato" class="form-control" name="stato" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="country" class=" form-control-label">Telefono</label>
-                                                    <input type="text" id="country" placeholder="Inserisci il tuo Telefono" class="form-control" name="telefono">
+                                                    <input type="text" id="telefono" placeholder="Inserisci il tuo Telefono" class="form-control" name="telefono" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="postal-code" class=" form-control-label">Numero Patente</label>
-                                                    <input type="text" id="postal-code" placeholder="Inserisci il Numero della Patente" class="form-control" name="numPatente">
+                                                    <input type="text" id="numPatente" placeholder="Inserisci il Numero della Patente" class="form-control" name="numPatente" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <label for="postal-code" class=" form-control-label">Categoria Patente</label>
-                                                    <select name="catPatente" id="select" class="form-control">
+                                                    <select name="catPatente" id="catPatente" class="form-control" required>
                                                         <option value="0">Seleziona</option>
-                                                        <option value="1">A</option>
-                                                        <option value="2">B</option>
-                                                        <option value="3">C</option>
+                                                        <option value="A">A</option>
+                                                        <option value="B">B</option>
+                                                        <option value="C">C</option>
                                                     </select>
                                             </div>
-<!--                                            <div class="col-6">-->
-<!--                                                <div class="form-group">-->
-<!--                                                    <label for="country" class=" form-control-label">Ferito</label>-->
-<!--                                                    <div class="form-check">-->
-<!--                                                        <div class="radio">-->
-<!--                                                            <label for="radio1" class="form-check-label ">-->
-<!--                                                                <input type="radio" id="radio1" name="feritoSi" value="Ferito" class="form-check-input">Si-->
-<!--                                                            </label>-->
-<!--                                                        </div>-->
-<!--                                                        <div class="radio">-->
-<!--                                                            <label for="radio2" class="form-check-label ">-->
-<!--                                                                <input type="radio" id="radio2" name="feritoNo" value="Non ferito" class="form-check-input">No-->
-<!--                                                            </label>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
                                         </div>
-<!--                                        <input type="submit" name="btn_invia" value="Invia">-->
-                                        <button type="submit" class="btn btn-success btn-sm">Invia</button>
+                                        <button id="invia" type="submit" class="btn btn-success btn-sm" onclick="return clickButton()">Invia</button>
                                     </form>
+                                    <div class="alert sufee-alert with-close alert-success alert-dismissible fade show" style="display: none">
+                                        <span class="badge badge-pill badge-success">Successo</span>
+                                        Persona correttamente aggiunta!.
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -139,6 +128,51 @@ include_once "vendorsFooter.php"
         format: "yyyy-mm-dd",
         language: "it"
     });
+
+
+    function clickButton(){
+        var nome=document.getElementById('nome').value;
+        var cognome=document.getElementById('cognome').value;
+        var dataNascita=document.getElementById('dataNascita').value;
+        var codFiscale=document.getElementById('codFiscale').value;
+        var indirizzo=document.getElementById('indirizzo').value;
+        var cap=document.getElementById('cap').value;
+        var stato=document.getElementById('stato').value;
+        var telefono=document.getElementById('telefono').value;
+        var numPatente=document.getElementById('numPatente').value;
+        var catPatente=document.getElementById('catPatente').value;
+        var invia=document.getElementById('invia').value;
+
+        $.ajax({
+            type:"post",
+            url:"controllers/personaController.php",
+            data:
+                {
+                    'nome' :nome,
+                    'cognome' :cognome,
+                    'dataNascita' :dataNascita,
+                    'codFiscale' :codFiscale,
+                    'indirizzo' :indirizzo,
+                    'cap' :cap,
+                    'stato' :stato,
+                    'telefono' :telefono,
+                    'numPatente' :numPatente,
+                    'catPatente' :catPatente,
+                    'invia' :invia
+                },
+            cache:false,
+            success: function (html)
+            {
+                $('.alert').show();
+                setTimeout(redirect, 2000);
+            }
+        });
+        return false;
+    }
+
+    function redirect() {
+        window.location.replace("index.php");
+    }
 </script>
 </body>
 </html>

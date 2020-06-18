@@ -8,7 +8,7 @@
     <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
             <ul class="list-unstyled navbar__list">
-                <li class="active has-sub">
+                <li class="has-sub">
                     <a class="js-arrow" href="index.php">
                         <i class="fas fa-tachometer-alt"></i>Cruscotto</a>
                 </li>
@@ -20,7 +20,7 @@
                             <a href="personaForm.php">Persona</a>
                         </li>
                         <li>
-                            <a href="register.html">Incidente</a>
+                            <a href="incidenteForm.php">Incidente</a>
                         </li>
                         <li>
                             <a href="forget-pass.html">Veicolo</a>
