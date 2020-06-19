@@ -200,7 +200,7 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>© 2020 Realizzato da: <a href="https://github.com/ACd3v">Alex Calabrese-ACd3v</a>.</p>
+                                    <p>© 2020 Realizzato da: <a href="https://github.com/ACd3v">Alex Calabrese -ACd3v</a>.</p>
                                 </div>
                             </div>
                         </div>

@@ -34,8 +34,12 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="chart.html">
+                    <a href="veicoliInIncidentiForm.php">
                         <i class="fas fa-car"></i>Associa Veicolo ad un Incidente</a>
+                </li>
+                <li>
+                    <a href="chart.html">
+                        <i class="fas fa-box"></i>Content</a>
                 </li>
                 <!--                        <li>-->
                 <!--                            <a href="table.html">-->

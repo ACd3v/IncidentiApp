@@ -73,30 +73,30 @@ class VeicoloInIncidenteDAO {
                 VALUES (:idVeicolo, :idIncidente)";
 
         // Select per verificare se l'VeicoloInIncidente che si vuole inserire già esiste
-        $sqlVer = "SELECT * FROM veicoliinincidenti WHERE idVeicolo = :idVeicolo AND idIncidente = :idIncidente";
+//        $sqlVer = "SELECT * FROM veicoliinincidenti WHERE idVeicolo = :idVeicolo AND idIncidente = :idIncidente";
 
         try {
             $conn = Connection::getConnection();
-            $stm1 = $conn->prepare($sqlVer);
-            $stm1->bindParam(':idVeicolo', $idVeicolo, PDO::PARAM_INT);
-            $stm1->bindParam(':idIncidente', $idIncidente, PDO::PARAM_INT);
-            $stm1->execute();
+//            $stm1 = $conn->prepare($sqlVer);
+//            $stm1->bindParam(':idVeicolo', $idVeicolo, PDO::PARAM_INT);
+//            $stm1->bindParam(':idIncidente', $idIncidente, PDO::PARAM_INT);
+//            $stm1->execute();
+//
+//            //Fetch
+//            $riga = $stm1->fetch(PDO::FETCH_ASSOC);
+//            $idVeicoloVer = $riga['idVeicolo'];
+//            $idIncidenteVer = $riga['idIncidente'];
 
-            //Fetch
-            $riga = $stm1->fetch(PDO::FETCH_ASSOC);
-            $idVeicoloVer = $riga['idVeicolo'];
-            $idIncidenteVer = $riga['idIncidente'];
-
-            if($idVeicoloVer != $idVeicolo && $idIncidenteVer != $idIncidente) {
+//            if($idVeicoloVer != $idVeicolo && $idIncidenteVer != $idIncidente) {
                 $stm = $conn->prepare($sql);
                 $stm->bindParam(':idVeicolo', $idVeicolo, PDO::PARAM_INT);
                 $stm->bindParam(':idIncidente', $idIncidente, PDO::PARAM_INT);
                 $stm->execute();
 
                 echo "Il VeicoloInIncidente è stato aggiunto con successo";
-            } else {
-                return "Attenzione! Il VeicoloInIncidente, non può essere aggiunto perché è già stato inserito!";
-            }
+//            } else {
+//                return "Attenzione! Il VeicoloInIncidente, non può essere aggiunto perché è già stato inserito!";
+//            }
         } catch (PDOException $e) {
             throw $e;
         }
