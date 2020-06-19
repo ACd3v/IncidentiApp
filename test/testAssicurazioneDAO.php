@@ -18,7 +18,7 @@ echo "$denominazione <br>
 
 //----------------------------------------------------
 
-/* getElencoTipiUtente() - OK
+/* getElencoAssicurazioni() - OK
 $elencoAssicurazioni = AssicurazioneDAO::getElencoAssicurazioni();
 foreach ($elencoAssicurazioni as $assicurazione) {
     echo "Id = " . $assicurazione->getIdAssicurazione() . " - ";
@@ -33,7 +33,7 @@ foreach ($elencoAssicurazioni as $assicurazione) {
 
 /* aggiungiAssicurazione() - OK
 //L'id non è importante perché poi non verrà utilizzato, ma si seguirà l'AUTO_INCREMENT
-//Da ricordare che bisogna passare l'idCitta, quindi via frontend bisogna ottenerlo
+//Da ricordare che bisogna passare l'idAssicurazione, quindi via frontend bisogna ottenerlo
 $assicurazione = new Assicurazione(null,'Test', FALSE, 'Via ROma 41', '3465296874','rocco@peppe.it');
 $add = AssicurazioneDAO::aggiungiAssicurazione($assicurazione);
 echo "$add";

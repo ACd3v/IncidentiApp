@@ -20,13 +20,16 @@
                             <a href="personaForm.php">Persona</a>
                         </li>
                         <li>
+                            <a href="ruoloForm.php">Ruolo</a>
+                        </li>
+                        <li>
                             <a href="incidenteForm.php">Incidente</a>
                         </li>
                         <li>
-                            <a href="forget-pass.html">Veicolo</a>
+                            <a href="assicurazioneForm.php">Assicurazione</a>
                         </li>
                         <li>
-                            <a href="forget-pass.html">Assicurazione</a>
+                            <a href="veicoloForm.php">Veicolo</a>
                         </li>
                     </ul>
                 </li>

@@ -7,7 +7,7 @@
     <?php
         include_once "vendorsHeaders.php";
     ?>
-    <title>Aggiungi Incidente</title>
+    <title>Aggiungi Assicurazione</title>
 </head>
 
 <body class="animsition">
@@ -29,53 +29,41 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Aggiungi Incidente</strong>
+                                    <strong>Aggiungi Assicurazione</strong>
                                 </div>
                                 <div class="card-body card-block">
                                     <form id="form">
                                         <div class="row form-group">
                                             <div class="col-6">
-                                                <div class="row form-group">
-                                                    <div class="col col-md-8">
-                                                        <label for="textarea-input" class=" form-control-label">Descrizione</label>
-                                                    </div>
-                                                    <div class="col-12 col-md-9">
-                                                        <textarea name="textarea-input" id="descrizione" rows="6" placeholder="Inserisci una descrizione" class="form-control" required></textarea>
-                                                    </div>
+                                                <div class="form-group">
+                                                    <label for="company" class=" form-control-label">Denominazione</label>
+                                                    <input type="text" id="denominazione" placeholder="Inserisci la Denominazione" class="form-control" name="denominazione" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label for="postal-code" class=" form-control-label">Data</label>
-                                                    <div id="calendario">
-                                                        <div class="input-group date" >
-                                                            <input type="text" id="data" class="form-control" name="data" required><span class="input-group-addon"><i class="fas fa-calendar-alt" required></i></span>
-                                                        </div>
-                                                    </div>
+                                                    <label for="address" class=" form-control-label">Indirizzo</label>
+                                                    <input type="text" id="indirizzo" placeholder="Inserisci il tuo Indirizzo" class="form-control" name="indirizzo" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label for="postal-code" class=" form-control-label">Ora</label>
-                                                    <input type="text" id="ora" placeholder="HH:MM" class="form-control" name="cap" required>
+                                                    <label for="country" class=" form-control-label">Telefono</label>
+                                                    <input type="text" id="telefono" placeholder="Inserisci il tuo Telefono" class="form-control" name="telefono" required>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label for="country" class=" form-control-label">Carica Foto</label>
-                                                    <input type="text" id="pathFoto" placeholder="Inserisci il tuo Stato" class="form-control" name="stato" required>
+                                                    <label for="email" class=" form-control-label">Email</label>
+                                                    <input type="text" id="email" placeholder="Inserisci la tua Email" class="form-control" name="email" required>
                                                 </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class=" form-control-label">Seleziona il punto</label>
-                                                <?php include "./mappa.html" ?>
                                             </div>
                                         </div>
-                                            <button id="invia" type="submit" class="btn btn-success btn-sm" onclick="return validationAndSend()">Invia</button>
-                                        </form>
+                                        <button id="invia" type="submit" class="btn btn-success btn-sm" onclick="return validationAndSend()">Invia</button>
+                                    </form>
                                     <div class="alert sufee-alert with-close alert-success alert-dismissible fade show" style="display: none">
                                         <span class="badge badge-pill badge-success">Successo</span>
-                                        Incidente correttamente aggiunto!
+                                        Assicurazione correttamente aggiunta!.
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -102,6 +90,7 @@ include_once "vendorsFooter.php"
 
     var form = document.getElementById('form');
 
+
     function validationAndSend() {
         if(form.checkValidity()){
             $('.alert').show();
@@ -110,25 +99,21 @@ include_once "vendorsFooter.php"
     }
 
     function clickButton(){
-        var descrizione=document.getElementById('descrizione').value;
-        var data=document.getElementById('data').value;
-        var ora=document.getElementById('ora').value;
-        var latitudine=document.getElementById('lat').value;
-        var longitudine=document.getElementById('lon').value;
+        var denominazione=document.getElementById('denominazione').value;
+        var indirizzo=document.getElementById('indirizzo').value;
+        var telefono=document.getElementById('telefono').value;
+        var email=document.getElementById('email').value;
         var invia=document.getElementById('invia').value;
-
-        console.log(descrizione, data, ora, latitudine, longitudine, invia);
 
         $.ajax({
             type:"post",
-            url:"controllers/incidenteController.php",
+            url:"controllers/assicurazioneController.php",
             data:
                 {
-                    'descrizione' :descrizione,
-                    'longitudine' :longitudine,
-                    'latitudine' :latitudine,
-                    'data' :data,
-                    'ora' :ora,
+                    'denominazione' :denominazione,
+                    'indirizzo' :indirizzo,
+                    'telefono' :telefono,
+                    'email' :email,
                     'invia' :invia
                 },
             cache:false,

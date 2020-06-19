@@ -34,13 +34,13 @@ foreach ($elencoVeicoli as $veicolo) {
 
 //----------------------------------------------------
 
-/* aggiungiVeicolo() - OK
+// aggiungiVeicolo() - OK
 //L'id non è importante perché poi non verrà utilizzato, ma si seguirà l'AUTO_INCREMENT
 //Da ricordare che bisogna passare l'idCitta, quindi via frontend bisogna ottenerlo
 $veicolo = new Veicolo(null,'Test','Tesla', '196FV52', 'FSK65S4',1, 1);
 $add = VeicoloDAO::aggiungiVeicolo($veicolo);
 echo "$add";
-*/
+//
 
 //----------------------------------------------------
 

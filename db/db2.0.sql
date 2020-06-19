@@ -57,10 +57,10 @@ CREATE TABLE incidenti (
 CREATE TABLE ruoli (
     idRuolo INT(5) PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30) NOT NULL,
+    ferito BOOLEAN NOT NULL,
     descrizione VARCHAR(100) NOT NULL,
     idPersona INT(5) NOT NULL,
     idIncidente INT(5) NOT NULL,
-    ferito BOOLEAN NOT NULL,
     FOREIGN KEY (idPersona) REFERENCES persone(idPersona),
     FOREIGN KEY (idIncidente) REFERENCES incidenti(idIncidente)
 );

@@ -32,7 +32,7 @@
                                     <strong>Aggiungi Persona</strong>
                                 </div>
                                 <div class="card-body card-block">
-                                    <form>
+                                    <form id="form">
                                         <div class="row form-group">
                                             <div class="col-6">
                                                 <div class="form-group">
@@ -100,7 +100,7 @@
                                                     </select>
                                             </div>
                                         </div>
-                                        <button id="invia" type="submit" class="btn btn-success btn-sm" onclick="return clickButton()">Invia</button>
+                                        <button id="invia" type="submit" class="btn btn-success btn-sm" onclick="return validationAndSend()">Invia</button>
                                     </form>
                                     <div class="alert sufee-alert with-close alert-success alert-dismissible fade show" style="display: none">
                                         <span class="badge badge-pill badge-success">Successo</span>
@@ -128,6 +128,15 @@ include_once "vendorsFooter.php"
         format: "yyyy-mm-dd",
         language: "it"
     });
+
+    var form = document.getElementById('form');
+
+    function validationAndSend() {
+        if(form.checkValidity()){
+            $('.alert').show();
+            clickButton();
+        }
+    }
 
 
     function clickButton(){
@@ -163,8 +172,8 @@ include_once "vendorsFooter.php"
             cache:false,
             success: function (html)
             {
-                $('.alert').show();
-                setTimeout(redirect, 2000);
+                // $('.alert').show();
+                // setTimeout(redirect, 2000);
             }
         });
         return false;
