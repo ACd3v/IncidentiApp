@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/veicoloInIncidenteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/veicoloInIncidenteForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sidebarDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/VeicoloInIncidenteDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/VeicoloInIncidenteDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/headerMobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerMobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/IncidenteDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/IncidenteDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personaForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/personaForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoloForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/ruoloForm.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <workItem from="1592391004824" duration="7899000" />
       <workItem from="1592468574114" duration="5882000" />
       <workItem from="1592497597237" duration="6033000" />
-      <workItem from="1592547734439" duration="18525000" />
+      <workItem from="1592547734439" duration="19043000" />
     </task>
     <servers />
   </component>

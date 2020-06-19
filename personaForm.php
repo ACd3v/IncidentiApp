@@ -34,7 +34,7 @@
                                 <div class="card-body card-block">
                                     <form id="form">
                                         <div class="row form-group">
-                                            <div class="col-6">
+                                            <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label for="company" class=" form-control-label">Nome</label>
                                                     <input type="text" id="nome" placeholder="Inserisci il tuo Nome" class="form-control" name="nome" required>

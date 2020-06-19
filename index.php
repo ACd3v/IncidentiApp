@@ -167,7 +167,7 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
 <!--                        </div>-->
                         <div class="row">
                             <div class="col-lg-12">
-                                <h2 class="title-1 m-b-25">Ultimi 3 Incidenti</h2>
+                                <h2 class="title-1 m-b-25">Elenco Ultimi Incidenti</h2>
                                 <div class="table-responsive table--no-card m-b-40">
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
@@ -181,7 +181,7 @@ include_once __DIR__.'/dao/VeicoloDAO.php';
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $elencoIncidenti = IncidenteDAO::getElencoIncidenti();
+                                            $elencoIncidenti = IncidenteDAO::getElencoUltimiIncidenti();
                                             foreach ($elencoIncidenti as $incidente) {
                                                 echo "<tr>";
                                                 echo "<td>".$incidente->getData()." ".$incidente->getOra()."</td>";

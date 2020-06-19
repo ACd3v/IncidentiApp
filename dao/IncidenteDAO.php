@@ -218,4 +218,35 @@ class IncidenteDAO {
             throw $e;
         }
     }
+
+    /***
+     * Restituisce l'elenco delle incidenti
+     * @return Incidente|array:Incidente un array di oggetti Incidente
+     */
+    public static function getElencoUltimiIncidenti() {
+        try {
+            $conn = Connection::getConnection();
+            $sql = "SELECT * FROM incidenti ORDER BY incidenti.data DESC";
+            $stm = $conn->query($sql);
+            $Vincidente = array();
+
+            while ($riga = $stm->fetch(PDO::FETCH_ASSOC)) {
+
+                $idIncidente = $riga['idIncidente'];
+                $descrizione = $riga['descrizione'];
+                $longitudine = $riga['longitudine'];
+                $latitudine = $riga['latitudine'];
+                $data = $riga['data'];
+                $ora = $riga['ora'];
+                $pathFoto = $riga['pathFoto'];
+
+                $incidente = new Incidente($idIncidente, $descrizione, $longitudine, $latitudine, $data, $ora, $pathFoto);
+                array_push($Vincidente, $incidente);
+            }
+
+        } catch (PDOException $e) {
+            throw $e;
+        }
+        return $Vincidente;
+    }
 }

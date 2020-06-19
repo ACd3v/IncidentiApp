@@ -42,7 +42,7 @@
                                                     <input type="text" id="nome" placeholder="Inserisci il Nome" class="form-control" name="nome" required>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-sm-6">
                                                 <label for="postal-code" class=" form-control-label">Ferito?</label>
                                                 <select name="ferito" id="ferito" class="form-control" required>
                                                     <option value="3">Seleziona</option>
@@ -50,7 +50,7 @@
                                                     <option value="1">Si</option>
                                                 </select>
                                             </div>
-                                            <div class="col-8">
+                                            <div class="col-sm-8">
                                                 <div class="row form-group">
                                                     <div class="col col-md-8">
                                                         <label for="textarea-input" class=" form-control-label">Descrizione</label>
