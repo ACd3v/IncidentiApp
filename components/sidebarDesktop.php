@@ -38,19 +38,19 @@
                         <i class="fas fa-eye"></i>Visualizza</a>
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
-                            <a href="personaForm.php">Persona</a>
+                            <a href="personaRead.php">Persona</a>
                         </li>
                         <li>
-                            <a href="ruoloForm.php">Ruolo</a>
+                            <a href="ruoloRead.php">Ruolo</a>
                         </li>
                         <li>
-                            <a href="incidenteForm.php">Incidente</a>
+                            <a href="incidenteRead.php">Incidente</a>
                         </li>
                         <li>
-                            <a href="assicurazioneForm.php">Assicurazione</a>
+                            <a href="assicurazioneRead.php">Assicurazione</a>
                         </li>
                         <li>
-                            <a href="veicoloForm.php">Veicolo</a>
+                            <a href="veicoloRead.php">Veicolo</a>
                         </li>
                     </ul>
                 </li>
