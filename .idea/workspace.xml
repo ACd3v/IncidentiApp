@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assicurazioneRead.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incidenteRead.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personaRead.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ruoloRead.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/veicoloRead.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/veicoloInIncidenteDeleteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sidebarDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/veicoloInIncidenteDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/veicoloInIncidenteDelete.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +38,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp" />
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\controllers" />
+      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp" />
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\dao\classes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -80,7 +76,7 @@
       <workItem from="1592468574114" duration="5882000" />
       <workItem from="1592497597237" duration="6033000" />
       <workItem from="1592547734439" duration="19698000" />
-      <workItem from="1592639257105" duration="16390000" />
+      <workItem from="1592639257105" duration="18009000" />
     </task>
     <servers />
   </component>

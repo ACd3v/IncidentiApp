@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
     include_once "vendorsHeaders.php";
-    include_once "./dao/VeicoloDAO.php";
+    include_once "./dao/VeicoloInIncidenteDAO.php";
     include_once "./dao/IncidenteDAO.php";
+    include_once "./dao/VeicoloDAO.php";
     ?>
     <title>Aggiungi Ruolo</title>
 </head>
@@ -31,43 +32,38 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Associa un veicolo ad un incidente</strong>
+                                    <strong>Elimina Veicolo in un determinato Incidente</strong>
                                 </div>
                                 <div class="card-body card-block">
                                     <form id="form">
                                         <div class="row form-group">
-                                            <div class="col-6">
-                                                <label class=" form-control-label">Seleziona Veicolo</label>
-                                                <select name="idVeicolo" id="idVeicolo" class="form-control">
+                                            <div class="col-8 offset-2">
+                                                <label class=" form-control-label">Seleziona Veicolo in un determinato Incidente</label>
+                                                <select name="idVeicoloInIncidente" id="idVeicoloInIncidente" class="form-control">
                                                     <option value="0">Seleziona</option>
                                                     <?php
-                                                    $elencoVeicolo = VeicoloDAO::getElencoVeicoli();
-                                                    foreach ($elencoVeicolo as $veicolo) {
-                                                        echo '<option value="'.$veicolo->getIdVeicolo().'">'.$veicolo->getMarca().' '.$veicolo->getTipo().'</option>';
+                                                    $elencoVeicoliInIncidenti = VeicoloInIncidenteDAO::getElencoVeicoliInIncidenti();
+
+                                                    foreach ($elencoVeicoliInIncidenti as $veicoloInIncidente) {
+                                                        $veicolo = VeicoloDAO::getVeicolo($veicoloInIncidente->getIdVeicolo());
+                                                        $incidente = IncidenteDAO::getIncidente($veicoloInIncidente->getIdIncidente());
+
+                                                        echo '<option value="'.$veicoloInIncidente->getIdVeicoloInIncidente().'">'.$veicolo->getMarca().' '.$veicolo->getTipo().' -> '.$incidente->getDescrizione().'</option>';
                                                     }
                                                     ?>
                                                 </select>
-                                                <p>Non lo trovi? <a href="veicoloForm.php">Clicca qui</a></p>
+                                                <p>Vuoi aggiungerla? <a href="ruoloForm.php">Clicca qui</a></p>
                                             </div>
-                                            <div class="col-6">
-                                                <label class=" form-control-label">Seleziona Incidente</label>
-                                                <select name="idIncidente" id="idIncidente" class="form-control">
-                                                    <option value="0">Seleziona</option>
-                                                    <?php
-                                                    $elencoIncidenti = IncidenteDAO::getElencoIncidenti();
-                                                    foreach ($elencoIncidenti as $incidente) {
-                                                        echo '<option value="'.$incidente->getIdIncidente().'">'.$incidente->getDescrizione().'</option>';
-                                                    }
-                                                    ?>
-                                                </select>
-                                                <p>Non lo trovi? <a href="incidenteForm.php">Clicca qui</a></p>
+                                            <div class="col-8 offset-5">
+                                                <button id="invia" type="reset" class="btn btn-danger btn-sm" onclick="return validationAndSend()">
+                                                    <i class="fa fa-eraser"></i> Elimina
+                                                </button>
                                             </div>
                                         </div>
-                                        <button id="invia" type="submit" class="btn btn-success btn-sm" onclick="return validationAndSend()">Invia</button>
                                     </form>
-                                    <div class="alert sufee-alert with-close alert-success alert-dismissible fade show" style="display: none">
-                                        <span class="badge badge-pill badge-success">Successo</span>
-                                        Veicolo correttamente aggiunto!.
+                                    <div class="alert sufee-alert alert with-close alert-danger alert-dismissible fade show" style="display: none">
+                                        <span class="badge badge-pill badge-danger">Successo</span>
+                                        Persona eliminata correttamente!
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -93,35 +89,33 @@ include_once "vendorsFooter.php"
     });
 
     var form = document.getElementById('form');
+    // console.log(ferito);
+
 
     function validationAndSend() {
         if(form.checkValidity()){
             $('.alert').show();
             clickButton();
+            setTimeout(redirect, 1500);
         }
     }
 
     function clickButton(){
-        var idVeicolo=document.getElementById('idVeicolo').value;
-        var idIncidente=document.getElementById('idIncidente').value;
+        var idVeicoloInIncidente=document.getElementById('idVeicoloInIncidente').value;
         var invia=document.getElementById('invia').value;
-
-
 
         $.ajax({
             type:"post",
-            url:"controllers/veicoloInIncidenteController.php",
+            url:"controllers/veicoloInIncidenteDeleteController.php",
             data:
                 {
-                    'idVeicolo' :idVeicolo,
-                    'idIncidente' :idIncidente,
+                    'idVeicoloInIncidente' :idVeicoloInIncidente,
                     'invia' :invia
                 },
             cache:false,
-            success: function (html)
+            success: function (response)
             {
-                // $('.alert').show();
-                // setTimeout(redirect, 2000);
+                console.log(response);
             }
         });
         return false;
