@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
     include_once "vendorsHeaders.php";
-    include_once "./dao/RuoloDAO.php";
     include_once "./dao/IncidenteDAO.php";
+
     ?>
-    <title>Aggiungi Ruolo</title>
+    <title>Elimina Incidente</title>
 </head>
 
 <body class="animsition">
@@ -37,27 +37,18 @@
                                     <form id="form">
                                         <div class="row form-group">
                                             <div class="col-8 offset-2">
-                                                <label class=" form-control-label">Seleziona Ruolo</label>
-                                                <select name="idRuolo" id="idRuolo" class="form-control">
+                                                <label class=" form-control-label">Seleziona Incidente</label>
+                                                <select name="idIncidente" id="idIncidente" class="form-control">
                                                     <option value="0">Seleziona</option>
                                                     <?php
-                                                    $elencoRuoliInfo = RuoloDAO::getElencoRuoliInfo();
-                                                    $elencoRuoli = RuoloDAO::getElencoRuoli();
+                                                    $elencoIncidenti = IncidenteDAO::getElencoIncidenti();
 
-//                                                    foreach ($elencoRuoliInfo as $ruoloInfo) {
-//                                                        foreach ($elencoRuoli as $ruolo){
-//                                                                echo '<option value="'.$ruolo->getIdRuolo().'">'.$ruoloInfo->getNome().' '.$ruoloInfo->getCognome().' - '.$ruoloInfo->getDenominazione().' -> '.$ruoloInfo->getDescrizione().'</option>';
-//                                                        }
-//                                                    }
-
-                                                    reset($elencoRuoli);
-                                                    foreach ($elencoRuoliInfo as $ruoloInfo) {
-                                                        $ruolo = current($elencoRuoli); next($elencoRuoli);
-                                                        echo '<option value="'.$ruolo->getIdRuolo().'">'.$ruoloInfo->getNome().' '.$ruoloInfo->getCognome().' - '.$ruoloInfo->getDenominazione().' -> '.$ruoloInfo->getDescrizione().'</option>';
+                                                    foreach ($elencoIncidenti as $incidente) {
+                                                        echo '<option value="'.$incidente->getIdIncidente().'">'.$incidente->getDescrizione().'</option>';
                                                     }
                                                     ?>
                                                 </select>
-                                                <p>Vuoi aggiungerla? <a href="ruoloForm.php">Clicca qui</a></p>
+                                                <p>Vuoi aggiungerlo? <a href="incidenteForm.php">Clicca qui</a></p>
                                             </div>
                                             <div class="col-8 offset-5">
                                                 <button id="invia" type="reset" class="btn btn-danger btn-sm" onclick="return validationAndSend()">
@@ -68,7 +59,7 @@
                                     </form>
                                     <div class="alert sufee-alert alert with-close alert-danger alert-dismissible fade show" style="display: none">
                                         <span class="badge badge-pill badge-danger">Successo</span>
-                                        Persona eliminata correttamente!
+                                        Incidente eliminato correttamente!
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -106,15 +97,15 @@ include_once "vendorsFooter.php"
     }
 
     function clickButton(){
-        var idRuolo=document.getElementById('idRuolo').value;
+        var idIncidente=document.getElementById('idIncidente').value;
         var invia=document.getElementById('invia').value;
 
         $.ajax({
             type:"post",
-            url:"controllers/ruoloDeleteController.php",
+            url:"controllers/incidenteDeleteController.php",
             data:
                 {
-                    'idRuolo' :idRuolo,
+                    'idIncidente' :idIncidente,
                     'invia' :invia
                 },
             cache:false,

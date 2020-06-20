@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
     include_once "vendorsHeaders.php";
-    include_once "./dao/RuoloDAO.php";
+    include_once "./dao/VeicoloDAO.php";
     include_once "./dao/IncidenteDAO.php";
     ?>
     <title>Aggiungi Ruolo</title>
@@ -31,44 +31,43 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Elimina Ruolo</strong>
+                                    <strong>Associa un veicolo ad un incidente</strong>
                                 </div>
                                 <div class="card-body card-block">
                                     <form id="form">
                                         <div class="row form-group">
-                                            <div class="col-8 offset-2">
-                                                <label class=" form-control-label">Seleziona Ruolo</label>
-                                                <select name="idRuolo" id="idRuolo" class="form-control">
+                                            <div class="col-6">
+                                                <label class=" form-control-label">Seleziona Veicolo</label>
+                                                <select name="idVeicolo" id="idVeicolo" class="form-control">
                                                     <option value="0">Seleziona</option>
                                                     <?php
-                                                    $elencoRuoliInfo = RuoloDAO::getElencoRuoliInfo();
-                                                    $elencoRuoli = RuoloDAO::getElencoRuoli();
-
-//                                                    foreach ($elencoRuoliInfo as $ruoloInfo) {
-//                                                        foreach ($elencoRuoli as $ruolo){
-//                                                                echo '<option value="'.$ruolo->getIdRuolo().'">'.$ruoloInfo->getNome().' '.$ruoloInfo->getCognome().' - '.$ruoloInfo->getDenominazione().' -> '.$ruoloInfo->getDescrizione().'</option>';
-//                                                        }
-//                                                    }
-
-                                                    reset($elencoRuoli);
-                                                    foreach ($elencoRuoliInfo as $ruoloInfo) {
-                                                        $ruolo = current($elencoRuoli); next($elencoRuoli);
-                                                        echo '<option value="'.$ruolo->getIdRuolo().'">'.$ruoloInfo->getNome().' '.$ruoloInfo->getCognome().' - '.$ruoloInfo->getDenominazione().' -> '.$ruoloInfo->getDescrizione().'</option>';
+                                                    $elencoVeicolo = VeicoloDAO::getElencoVeicoli();
+                                                    foreach ($elencoVeicolo as $veicolo) {
+                                                        echo '<option value="'.$veicolo->getIdVeicolo().'">'.$veicolo->getMarca().' '.$veicolo->getTipo().'</option>';
                                                     }
                                                     ?>
                                                 </select>
-                                                <p>Vuoi aggiungerla? <a href="ruoloForm.php">Clicca qui</a></p>
+                                                <p>Non lo trovi? <a href="veicoloForm.php">Clicca qui</a></p>
                                             </div>
-                                            <div class="col-8 offset-5">
-                                                <button id="invia" type="reset" class="btn btn-danger btn-sm" onclick="return validationAndSend()">
-                                                    <i class="fa fa-eraser"></i> Elimina
-                                                </button>
+                                            <div class="col-6">
+                                                <label class=" form-control-label">Seleziona Incidente</label>
+                                                <select name="idIncidente" id="idIncidente" class="form-control">
+                                                    <option value="0">Seleziona</option>
+                                                    <?php
+                                                    $elencoIncidenti = IncidenteDAO::getElencoIncidenti();
+                                                    foreach ($elencoIncidenti as $incidente) {
+                                                        echo '<option value="'.$incidente->getIdIncidente().'">'.$incidente->getDescrizione().'</option>';
+                                                    }
+                                                    ?>
+                                                </select>
+                                                <p>Non lo trovi? <a href="incidenteForm.php">Clicca qui</a></p>
                                             </div>
                                         </div>
+                                        <button id="invia" type="submit" class="btn btn-success btn-sm" onclick="return validationAndSend()">Invia</button>
                                     </form>
-                                    <div class="alert sufee-alert alert with-close alert-danger alert-dismissible fade show" style="display: none">
-                                        <span class="badge badge-pill badge-danger">Successo</span>
-                                        Persona eliminata correttamente!
+                                    <div class="alert sufee-alert with-close alert-success alert-dismissible fade show" style="display: none">
+                                        <span class="badge badge-pill badge-success">Successo</span>
+                                        Veicolo correttamente aggiunto!.
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -94,33 +93,35 @@ include_once "vendorsFooter.php"
     });
 
     var form = document.getElementById('form');
-    // console.log(ferito);
-
 
     function validationAndSend() {
         if(form.checkValidity()){
             $('.alert').show();
             clickButton();
-            setTimeout(redirect, 1500);
         }
     }
 
     function clickButton(){
-        var idRuolo=document.getElementById('idRuolo').value;
+        var idVeicolo=document.getElementById('idVeicolo').value;
+        var idIncidente=document.getElementById('idIncidente').value;
         var invia=document.getElementById('invia').value;
+
+
 
         $.ajax({
             type:"post",
-            url:"controllers/ruoloDeleteController.php",
+            url:"controllers/veicoloInIncidenteController.php",
             data:
                 {
-                    'idRuolo' :idRuolo,
+                    'idVeicolo' :idVeicolo,
+                    'idIncidente' :idIncidente,
                     'invia' :invia
                 },
             cache:false,
-            success: function (response)
+            success: function (html)
             {
-                console.log(response);
+                // $('.alert').show();
+                // setTimeout(redirect, 2000);
             }
         });
         return false;

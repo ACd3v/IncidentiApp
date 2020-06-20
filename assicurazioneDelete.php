@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
     include_once "vendorsHeaders.php";
-    include_once "./dao/RuoloDAO.php";
-    include_once "./dao/IncidenteDAO.php";
+    include_once "./dao/AssicurazioneDAO.php";
+
     ?>
-    <title>Aggiungi Ruolo</title>
+    <title>Elimina Assicurazione</title>
 </head>
 
 <body class="animsition">
@@ -31,33 +31,24 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Elimina Ruolo</strong>
+                                    <strong>Elimina Assicurazione</strong>
                                 </div>
                                 <div class="card-body card-block">
                                     <form id="form">
                                         <div class="row form-group">
                                             <div class="col-8 offset-2">
-                                                <label class=" form-control-label">Seleziona Ruolo</label>
-                                                <select name="idRuolo" id="idRuolo" class="form-control">
+                                                <label class=" form-control-label">Seleziona Assicurazione</label>
+                                                <select name="idAssicurazione" id="idAssicurazione" class="form-control">
                                                     <option value="0">Seleziona</option>
                                                     <?php
-                                                    $elencoRuoliInfo = RuoloDAO::getElencoRuoliInfo();
-                                                    $elencoRuoli = RuoloDAO::getElencoRuoli();
+                                                    $elencoAssicurazioni = AssicurazioneDAO::getElencoAssicurazioni();
 
-//                                                    foreach ($elencoRuoliInfo as $ruoloInfo) {
-//                                                        foreach ($elencoRuoli as $ruolo){
-//                                                                echo '<option value="'.$ruolo->getIdRuolo().'">'.$ruoloInfo->getNome().' '.$ruoloInfo->getCognome().' - '.$ruoloInfo->getDenominazione().' -> '.$ruoloInfo->getDescrizione().'</option>';
-//                                                        }
-//                                                    }
-
-                                                    reset($elencoRuoli);
-                                                    foreach ($elencoRuoliInfo as $ruoloInfo) {
-                                                        $ruolo = current($elencoRuoli); next($elencoRuoli);
-                                                        echo '<option value="'.$ruolo->getIdRuolo().'">'.$ruoloInfo->getNome().' '.$ruoloInfo->getCognome().' - '.$ruoloInfo->getDenominazione().' -> '.$ruoloInfo->getDescrizione().'</option>';
+                                                    foreach ($elencoAssicurazioni as $assicurazione) {
+                                                        echo '<option value="'.$assicurazione->getIdAssicurazione().'">'.$assicurazione->getDenominazione().'</option>';
                                                     }
                                                     ?>
                                                 </select>
-                                                <p>Vuoi aggiungerla? <a href="ruoloForm.php">Clicca qui</a></p>
+                                                <p>Vuoi aggiungerla? <a href="assicurazioneForm.php">Clicca qui</a></p>
                                             </div>
                                             <div class="col-8 offset-5">
                                                 <button id="invia" type="reset" class="btn btn-danger btn-sm" onclick="return validationAndSend()">
@@ -68,7 +59,7 @@
                                     </form>
                                     <div class="alert sufee-alert alert with-close alert-danger alert-dismissible fade show" style="display: none">
                                         <span class="badge badge-pill badge-danger">Successo</span>
-                                        Persona eliminata correttamente!
+                                        Assicurazione eliminato correttamente!
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -94,8 +85,6 @@ include_once "vendorsFooter.php"
     });
 
     var form = document.getElementById('form');
-    // console.log(ferito);
-
 
     function validationAndSend() {
         if(form.checkValidity()){
@@ -106,15 +95,15 @@ include_once "vendorsFooter.php"
     }
 
     function clickButton(){
-        var idRuolo=document.getElementById('idRuolo').value;
+        var idAssicurazione=document.getElementById('idAssicurazione').value;
         var invia=document.getElementById('invia').value;
 
         $.ajax({
             type:"post",
-            url:"controllers/ruoloDeleteController.php",
+            url:"controllers/assicurazioneDeleteController.php",
             data:
                 {
-                    'idRuolo' :idRuolo,
+                    'idAssicurazione' :idAssicurazione,
                     'invia' :invia
                 },
             cache:false,

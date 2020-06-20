@@ -109,10 +109,9 @@ include_once "vendorsFooter.php"
                     'invia' :invia
                 },
             cache:false,
-            success: function (html)
+            success: function (response)
             {
-                // $('.alert').show();
-                // setTimeout(redirect, 2000);
+                console.log(response);
             }
         });
         return false;

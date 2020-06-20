@@ -6,6 +6,7 @@ if (isset($_POST['invia'])) {
     $idPersona = $_POST["idPersona"];
 
     $delete = PersonaDAO::cancellaPersona($idPersona);
+    echo json_encode($delete);
 }
 
 

@@ -14,7 +14,7 @@
                 </li>
                 <li>
                 <a class="js-arrow" href="#">
-                <i class="fas fa-plus"></i>Carica</a>
+                <i class="fas fa-plus"></i>Aggiungi</a>
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
                             <a href="personaForm.php">Persona</a>
@@ -34,8 +34,25 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="veicoliInIncidentiForm.php">
-                        <i class="fas fa-car"></i>Associa Veicolo ad un Incidente</a>
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-eye"></i>Visualizza</a>
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                        <li>
+                            <a href="personaForm.php">Persona</a>
+                        </li>
+                        <li>
+                            <a href="ruoloForm.php">Ruolo</a>
+                        </li>
+                        <li>
+                            <a href="incidenteForm.php">Incidente</a>
+                        </li>
+                        <li>
+                            <a href="assicurazioneForm.php">Assicurazione</a>
+                        </li>
+                        <li>
+                            <a href="veicoloForm.php">Veicolo</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a class="js-arrow" href="#">
@@ -48,15 +65,23 @@
                             <a href="ruoloDelete.php">Ruolo</a>
                         </li>
                         <li>
-                            <a href="incidenteForm.php">Incidente</a>
+                            <a href="incidenteDelete.php">Incidente</a>
                         </li>
                         <li>
-                            <a href="assicurazioneForm.php">Assicurazione</a>
+                            <a href="assicurazioneDelete.php">Assicurazione</a>
                         </li>
                         <li>
-                            <a href="veicoloForm.php">Veicolo</a>
+                            <a href="veicoloDelete.php">Veicolo</a>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="veicoloInIncidenteForm.php">
+                        <i class="fas fa-link"></i>Associa Veicolo ad un Incidente</a>
+                </li>
+                <li>
+                    <a href="veicoloInIncidenteDelete.php">
+                        <i class="fas fa-unlink"></i>Disassocia Veicolo ad un Incidente</a>
                 </li>
                 <li>
                     <a href="chart.html">

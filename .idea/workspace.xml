@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/ruoloDeleteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/classes/RuoloInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assicurazioneDelete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/assicurazioneDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/incidenteDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/veicoloDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/incidenteDelete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/veicoloDelete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/veicoloInIncidenteDelete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sidebarDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ruoloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ruoloController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/RuoloDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/RuoloDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/classes/Ruolo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/classes/Ruolo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db2.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/db2.0.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoloForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/ruoloForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testRuoloDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/testRuoloDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/personaDeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/personaDeleteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ruoloDeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ruoloDeleteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personaDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/personaDelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoloDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/ruoloDelete.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +48,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\controllers" />
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp" />
+      <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\controllers" />
       <recent name="C:\xampp\htdocs\Scuola-PHP\IncidentiApp\dao\classes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -83,7 +86,7 @@
       <workItem from="1592468574114" duration="5882000" />
       <workItem from="1592497597237" duration="6033000" />
       <workItem from="1592547734439" duration="19698000" />
-      <workItem from="1592639257105" duration="4355000" />
+      <workItem from="1592639257105" duration="10717000" />
     </task>
     <servers />
   </component>
@@ -144,10 +147,10 @@
       <screen x="-214" y="1080" width="1280" height="760" />
     </state>
     <state x="-214" y="1080" width="1296" height="862" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591856857986" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1591776475041">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1592666699341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1591776475041" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592666699341" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592033194655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
