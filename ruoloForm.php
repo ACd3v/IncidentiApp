@@ -38,8 +38,8 @@
                                         <div class="row form-group">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label for="company" class=" form-control-label">Nome</label>
-                                                    <input type="text" id="nome" placeholder="Inserisci il Nome" class="form-control" name="nome" required>
+                                                    <label for="company" class=" form-control-label">Denominazione</label>
+                                                    <input type="text" id="denominazione" placeholder="Inserisci il Nome" class="form-control" name="nome" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
@@ -128,7 +128,7 @@ include_once "vendorsFooter.php"
     }
 
     function clickButton(){
-        var nome=document.getElementById('nome').value;
+        var denominazione=document.getElementById('denominazione').value;
         var ferito=document.getElementById('ferito').value;
         var descrizione=document.getElementById('descrizione').value;
         var idPersona=document.getElementById('idPersona').value;
@@ -142,7 +142,7 @@ include_once "vendorsFooter.php"
             url:"controllers/ruoloController.php",
             data:
                 {
-                    'nome' :nome,
+                    'denominazione' :denominazione,
                     'ferito' :ferito,
                     'descrizione' :descrizione,
                     'idPersona' :idPersona,

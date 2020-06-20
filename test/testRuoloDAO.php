@@ -53,3 +53,16 @@ $cancella = RuoloDAO::cancellaRuolo(5);
 echo "$cancella";
 */
 //----------------------------------------------------
+
+//// cancellaRuolo() - OK
+//$elencoResults = RuoloDAO::getElencoRuoliInfo();
+//$nome = $elencoResults[0];
+//foreach ($elencoResults as $ruoli) {
+////echo "$ruoli[]";
+//$ruoli->get
+//}
+//
+//var_dump($elencoResults);
+//echo "$nome";
+////
+//----------------------------------------------------

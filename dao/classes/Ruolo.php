@@ -3,17 +3,17 @@
 
 class Ruolo {
     private $idRuolo;
-    private $nome;
+    private $denominazione;
     private $ferito;
     private $descrizione;
     private $idPersona;
     private $idIncidente;
 
 
-    public function __construct($idRuolo, $nome, $ferito, $descrizione, $idPersona, $idIncidente)
+    public function __construct($idRuolo, $denominazione, $ferito, $descrizione, $idPersona, $idIncidente)
     {
         $this->idRuolo = $idRuolo;
-        $this->nome = $nome;
+        $this->denominazione = $denominazione;
         $this->ferito = $ferito;
         $this->descrizione = $descrizione;
         $this->idPersona = $idPersona;
@@ -30,14 +30,14 @@ class Ruolo {
         $this->idRuolo = $idRuolo;
     }
 
-    public function getNome()
+    public function getDenominazione()
     {
-        return $this->nome;
+        return $this->denominazione;
     }
 
-    public function setNome($nome)
+    public function setDenominazione($denominazione)
     {
-        $this->nome = $nome;
+        $this->denominazione = $denominazione;
     }
 
     public function getFerito()

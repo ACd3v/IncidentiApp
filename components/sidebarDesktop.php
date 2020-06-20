@@ -38,6 +38,27 @@
                         <i class="fas fa-car"></i>Associa Veicolo ad un Incidente</a>
                 </li>
                 <li>
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-trash-alt"></i>Elimina</a>
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                        <li>
+                            <a href="personaDelete.php">Persona</a>
+                        </li>
+                        <li>
+                            <a href="ruoloDelete.php">Ruolo</a>
+                        </li>
+                        <li>
+                            <a href="incidenteForm.php">Incidente</a>
+                        </li>
+                        <li>
+                            <a href="assicurazioneForm.php">Assicurazione</a>
+                        </li>
+                        <li>
+                            <a href="veicoloForm.php">Veicolo</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a href="chart.html">
                         <i class="fas fa-box"></i>Content</a>
                 </li>
