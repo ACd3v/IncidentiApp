@@ -1,9 +1,28 @@
 
+
+
 (function ($) {
+  var persone;
+
   // USE STRICT
   "use strict";
+
+  $.ajax({
+    type:"post",
+    async: false,
+    url:"controllers/apiNumberPersone.php",
+    success: function (response)
+    {
+      // global. = response;
+      persone = response;
+
+      // console.log(persone);
+    }
+  });
+
   try {
     //WidgetChart 1
+    console.log(persone);
     var ctx = document.getElementById("widgetChart1");
     if (ctx) {
       ctx.height = 130;
@@ -13,7 +32,7 @@
           labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno'],
           type: 'line',
           datasets: [{
-            data: [78, 81, 80, 45, 34, 12, 40],
+            data: [ 78, 81, 80, 45, 34, 12, 40],
             label: 'Persone',
             backgroundColor: 'rgba(255,255,255,.1)',
             borderColor: 'rgba(255,255,255,.55)',

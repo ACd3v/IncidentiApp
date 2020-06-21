@@ -20,13 +20,13 @@
                             <a href="personaForm.php">Persona</a>
                         </li>
                         <li>
-                            <a href="ruoloForm.php">Ruolo</a>
-                        </li>
-                        <li>
                             <a href="incidenteForm.php">Incidente</a>
                         </li>
                         <li>
                             <a href="assicurazioneForm.php">Assicurazione</a>
+                        </li>
+                        <li>
+                            <a href="ruoloForm.php">Ruolo</a>
                         </li>
                         <li>
                             <a href="veicoloForm.php">Veicolo</a>
@@ -59,19 +59,19 @@
                         <i class="fas fa-trash-alt"></i>Elimina</a>
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
-                            <a href="personaDelete.php">Persona</a>
+                            <a href="ruoloDelete.php">Ruolo</a>
                         </li>
                         <li>
-                            <a href="ruoloDelete.php">Ruolo</a>
+                            <a href="veicoloDelete.php">Veicolo</a>
+                        </li>
+                        <li>
+                            <a href="personaDelete.php">Persona</a>
                         </li>
                         <li>
                             <a href="incidenteDelete.php">Incidente</a>
                         </li>
                         <li>
                             <a href="assicurazioneDelete.php">Assicurazione</a>
-                        </li>
-                        <li>
-                            <a href="veicoloDelete.php">Veicolo</a>
                         </li>
                     </ul>
                 </li>
@@ -83,10 +83,10 @@
                     <a href="veicoloInIncidenteDelete.php">
                         <i class="fas fa-unlink"></i>Disassocia Veicolo ad un Incidente</a>
                 </li>
-                <li>
-                    <a href="chart.html">
-                        <i class="fas fa-box"></i>Content</a>
-                </li>
+<!--                <li>-->
+<!--                    <a href="chart.html">-->
+<!--                        <i class="fas fa-box"></i>Content</a>-->
+<!--                </li>-->
                 <!--                        <li>-->
                 <!--                            <a href="table.html">-->
                 <!--                                <i class="fas fa-table"></i>Tables</a>-->
