@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/veicoloInIncidenteDeleteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/veicoloInIncidenteDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/veicoloInIncidenteDelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/headerDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/headerMobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerMobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendorsHeaders.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendorsHeaders.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,8 @@
       <workItem from="1592468574114" duration="5882000" />
       <workItem from="1592497597237" duration="6033000" />
       <workItem from="1592547734439" duration="19698000" />
-      <workItem from="1592639257105" duration="18009000" />
+      <workItem from="1592639257105" duration="18066000" />
+      <workItem from="1592777451766" duration="575000" />
     </task>
     <servers />
   </component>
@@ -120,11 +123,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="82" height="523" key="SqlResolveConfigurable/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592073941916" />
-    <state x="364" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592639271656">
+    <state x="364" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592777514317">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824/-214.1080.1280.760@0.0.1920.1040" timestamp="1592639271656" />
-    <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1592547734292" />
+    <state x="364" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1592777514317" />
     <state x="606" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591866441757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
