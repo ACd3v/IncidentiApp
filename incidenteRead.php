@@ -37,11 +37,10 @@
                                         <table class="table table-borderless table-data3">
                                             <thead>
                                             <tr>
+                                                <th>Data e Ora</th>
                                                 <th>Descrizione</th>
                                                 <th>Longitudine</th>
                                                 <th>Latitudine</th>
-                                                <th>Data</th>
-                                                <th>Ora</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -50,7 +49,6 @@
                                             foreach ($elencoIncidenti as $incidente) {
                                                 echo "<tr>";
                                                 echo "<td>".$incidente->getData()." ".$incidente->getOra()."</td>";
-                                                echo "<td>".$incidente->getIdIncidente()."</td>";
                                                 echo "<td>".$incidente->getDescrizione()."</td>";
                                                 echo "<td>" .$incidente->getLongitudine(). "</td>";
                                                 echo "<td>" .$incidente->getLatitudine(). "</td>";

@@ -62,10 +62,17 @@
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label for="country" class=" form-control-label">Carica Foto</label>
-                                                    <input type="text" id="pathFoto" placeholder="Inserisci il tuo Stato" class="form-control" name="stato" required>
+<!--                                                    <label for="country" class=" form-control-label">Carica Foto</label>-->
+<!--                                                    <input type="text" id="pathFoto" placeholder="Inserisci il tuo Stato" class="form-control" name="stato" required>-->
+
+                                                        <div class="col col-md-6">
+                                                            <label for="file-multiple-input" class=" form-control-label">Carica Foto</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <input type="file" id="file-multiple-input" name="file-multiple-input" multiple="" class="form-control-file">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             <div class="col-12">
                                                 <label class=" form-control-label">Seleziona il punto</label>
                                                 <?php include "./mappa.html" ?>
