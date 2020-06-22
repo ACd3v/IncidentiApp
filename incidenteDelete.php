@@ -31,7 +31,7 @@
                         <div class="col-lg-8 offset-lg-2">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Elimina Ruolo</strong>
+                                    <strong>Elimina Incidente</strong>
                                 </div>
                                 <div class="card-body card-block">
                                     <form id="form">

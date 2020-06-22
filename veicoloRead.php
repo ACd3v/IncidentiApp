@@ -10,7 +10,7 @@
         include_once "./dao/AssicurazioneDAO.php";
         include_once "./dao/PersonaDAO.php";
     ?>
-    <title>Aggiungi Incidente</title>
+    <title>Visualizza Veicoli</title>
 </head>
 
 <body class="animsition">

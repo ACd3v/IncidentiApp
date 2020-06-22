@@ -8,7 +8,7 @@
         include_once "vendorsHeaders.php";
         include_once "./dao/IncidenteDAO.php";
     ?>
-    <title>Aggiungi Incidente</title>
+    <title>Visualizza Incidenti</title>
 </head>
 
 <body class="animsition">

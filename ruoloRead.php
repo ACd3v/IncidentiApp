@@ -10,7 +10,7 @@
         include_once "./dao/PersonaDAO.php";
         include_once "./dao/IncidenteDAO.php";
     ?>
-    <title>Aggiungi Ruolo</title>
+    <title>Visualizza Ruoli</title>
 </head>
 
 <body class="animsition">

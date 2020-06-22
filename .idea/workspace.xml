@@ -3,10 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ce2fc7ba-e647-4374-a6a6-2193ce1fdcb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incidenteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/incidenteForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assicurazioneRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/assicurazioneRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/headerMobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerMobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sidebarDesktop.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebarDesktop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db2.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/db2.0.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incidenteDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/incidenteDelete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/incidenteRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/incidenteRead.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/chart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/mappa.html" beforeDir="false" afterPath="$PROJECT_DIR$/mappa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personaRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/personaRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoloDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/ruoloDelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoloRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/ruoloRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/veicoloForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/veicoloForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/veicoloInIncidenteDelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/veicoloInIncidenteDelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/veicoloInIncidenteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/veicoloInIncidenteForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/veicoloRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/veicoloRead.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +91,7 @@
       <workItem from="1592639257105" duration="18066000" />
       <workItem from="1592777451766" duration="3288000" />
       <workItem from="1592848040725" duration="659000" />
-      <workItem from="1592860232963" duration="651000" />
+      <workItem from="1592860232963" duration="2578000" />
     </task>
     <servers />
   </component>

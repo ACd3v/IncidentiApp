@@ -57,7 +57,7 @@
                                                     }
                                                     ?>
                                                 </select>
-                                                <p>Vuoi aggiungerla? <a href="ruoloForm.php">Clicca qui</a></p>
+                                                <p>Vuoi aggiungerlo? <a href="ruoloForm.php">Clicca qui</a></p>
                                             </div>
                                             <div class="col-8 offset-5">
                                                 <button id="invia" type="reset" class="btn btn-danger btn-sm" onclick="return validationAndSend()">

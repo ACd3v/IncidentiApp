@@ -10,7 +10,7 @@
     include_once "./dao/IncidenteDAO.php";
     include_once "./dao/VeicoloDAO.php";
     ?>
-    <title>Aggiungi Ruolo</title>
+    <title>Disassocia veicolo in incidente</title>
 </head>
 
 <body class="animsition">
@@ -52,7 +52,7 @@
                                                     }
                                                     ?>
                                                 </select>
-                                                <p>Vuoi aggiungerla? <a href="ruoloForm.php">Clicca qui</a></p>
+                                                <p>Vuoi aggiungerlo? <a href="veicoloInIncidenteForm.php">Clicca qui</a></p>
                                             </div>
                                             <div class="col-8 offset-5">
                                                 <button id="invia" type="reset" class="btn btn-danger btn-sm" onclick="return validationAndSend()">

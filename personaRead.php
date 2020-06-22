@@ -8,7 +8,7 @@
         include_once "vendorsHeaders.php";
         include_once "./dao/PersonaDAO.php";
     ?>
-    <title>Aggiungi Persona</title>
+    <title>Visualizza Persone</title>
 </head>
 
 <body class="animsition">
